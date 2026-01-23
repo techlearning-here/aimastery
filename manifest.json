@@ -1,5 +1,5 @@
 {
-  "name": "AI Tools Mastery Program",
+  "name": "AI Tech Mint",
   "short_name": "AI Mastery",
   "description": "Master essential AI tools and boost your productivity with comprehensive learning paths",
   "start_url": "/index.html",
@@ -24,7 +24,7 @@
   ],
   "screenshots": [
     {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 720'><rect fill='%231a202c' width='1280' height='720'/><text x='640' y='360' font-size='48' text-anchor='middle' fill='%233b82f6' font-family='Arial'>AI Tools Mastery Program</text></svg>",
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 720'><rect fill='%231a202c' width='1280' height='720'/><text x='640' y='360' font-size='48' text-anchor='middle' fill='%233b82f6' font-family='Arial'>AI Tech Mint</text></svg>",
       "sizes": "1280x720",
       "type": "image/svg+xml",
       "form_factor": "wide"

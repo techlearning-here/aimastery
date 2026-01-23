@@ -1,0 +1,16 @@
+# robots.txt for AI Tech Mint (aitechmint.com)
+
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /js/
+Allow: /pages/
+
+# Disallow documentation and backup files
+Disallow: /misc/
+
+# Sitemap
+Sitemap: https://aitechmint.com/sitemap.xml
+
+# Crawl delay (optional - prevents overwhelming server)
+Crawl-delay: 1

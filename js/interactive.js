@@ -905,3 +905,47 @@ window.progressTracker = progressTracker;
 window.themeSwitcher = themeSwitcher;
 // window.searchEngine = searchEngine; // REMOVED: Search functionality disabled
 window.feedbackSystem = feedbackSystem;
+
+// ==================== SCROLL ANIMATIONS ====================
+class ScrollAnimations {
+    constructor() {
+        this.observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        this.init();
+    }
+    
+    init() {
+        // Create Intersection Observer
+        this.observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Optionally unobserve after animation
+                    // this.observer.unobserve(entry.target);
+                }
+            });
+        }, this.observerOptions);
+        
+        // Observe all animation elements
+        this.observateElements();
+    }
+    
+    observateElements() {
+        const elements = document.querySelectorAll('.scroll-fade-in, .scroll-slide-left, .scroll-slide-right, .scroll-scale-up');
+        elements.forEach(el => this.observer.observe(el));
+    }
+    
+    refresh() {
+        this.observateElements();
+    }
+}
+
+// Initialize scroll animations
+let scrollAnimations;
+document.addEventListener('DOMContentLoaded', () => {
+    scrollAnimations = new ScrollAnimations();
+});
+
+window.scrollAnimations = scrollAnimations;
