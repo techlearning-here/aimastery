@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the fascinating history and evolution of Artificial Intelligence from 1950s to today. Learn about key milestones, breakthroughs, and pioneers who shaped AI.">
+    <title>History & Evolution of AI | AI Mastery Program</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page-specific header background - Digital timeline/circuit board theme */
+        header {
+            background: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070&auto=format&fit=crop');
+        }
+        
+        /* Timeline styling */
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary-color), var(--success-color));
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            padding-right: 55%;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            padding-left: 55%;
+            text-align: left;
+        }
+        
+        .timeline-year {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+            z-index: 2;
+            min-width: 100px;
+            text-align: center;
+        }
+        
+        .timeline-content {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 2px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-content:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+        }
+        
+        .timeline-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content p {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+        
+        /* Era sections */
+        .era-section {
+            background: rgba(59, 130, 246, 0.05);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 40px 0;
+            border-left: 6px solid var(--primary-color);
+        }
+        
+        .era-title {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .era-icon {
+            font-size: 2.5rem;
+        }
+        
+        /* Pioneer cards */
+        .pioneers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .pioneer-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .pioneer-card:hover {
+            border-color: var(--success-color);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+        }
+        
+        .pioneer-name {
+            color: var(--success-color);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .pioneer-contribution {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        /* Mobile timeline adjustments */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                padding-left: 80px;
+                padding-right: 0;
+                text-align: left;
+            }
+            
+            .timeline-year {
+                left: 30px;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="back-nav">
+        <a href="../index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <div>
+            <a href="prompt-engineering.html" style="margin: 0 10px;"><i class="fas fa-lightbulb"></i> Prompt Guide</a>
+            <a href="ai-ethics.html" style="margin: 0 10px;"><i class="fas fa-shield-alt"></i> Ethics</a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <span class="header-badge">
+                🎁 100% FREE
+            </span>
+            <h1>🕰️ History & Evolution of AI</h1>
+            <p>From ancient dreams to modern reality: The fascinating journey of Artificial Intelligence</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Introduction -->
+            <article>
+                <h2>📖 The Story of AI</h2>
+                <p>Artificial Intelligence isn't just a modern phenomenon—it's the culmination of thousands of years of human dreams, decades of scientific breakthroughs, and countless hours of brilliant minds working to create machines that can think.</p>
+                
+                <p>This journey spans from ancient myths of mechanical servants to today's neural networks that can write poetry, diagnose diseases, and drive cars. Understanding this history helps us appreciate where we are and envision where we're going.</p>
+                
+                <div class="info-box">
+                    <h4>💡 Why Study AI History?</h4>
+                    <ul>
+                        <li><strong>Context:</strong> Understand why AI works the way it does today</li>
+                        <li><strong>Patterns:</strong> Learn from past failures and successes</li>
+                        <li><strong>Inspiration:</strong> See how persistent vision creates reality</li>
+                        <li><strong>Perspective:</strong> Appreciate the pace of current progress</li>
+                    </ul>
+                </div>
+
+                <!-- Video Section -->
+                <div class="video-section">
+                    <h3>📺 Watch: The Evolution of AI</h3>
+                    <div class="video-grid">
+                        <div class="video-card">
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/kWmX3pd1f10?rel=0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allowfullscreen
+                                        frameborder="0">
+                                </iframe>
+                            </div>
+                            <div class="video-info">
+                                <span class="video-badge">OVERVIEW</span>
+                                <span class="video-duration">⏱ 11 min</span>
+                                <h4>History of Artificial Intelligence</h4>
+                                <p>A comprehensive journey through the major milestones in AI development</p>
+                            </div>
+                        </div>
+
+                        <div class="video-card">
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/mJeNghZXtMo?rel=0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allowfullscreen
+                                        frameborder="0">
+                                </iframe>
+                            </div>
+                            <div class="video-info">
+                                <span class="video-badge">DOCUMENTARY</span>
+                                <span class="video-duration">⏱ 14 min</span>
+                                <h4>The Evolution of AI</h4>
+                                <p>From Turing's test to modern deep learning systems</p>
+                            </div>
+                        </div>
+
+                        <div class="video-card">
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/5dZ_lvDgevk?rel=0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allowfullscreen
+                                        frameborder="0">
+                                </iframe>
+                            </div>
+                            <div class="video-info">
+                                <span class="video-badge">MODERN AI</span>
+                                <span class="video-duration">⏱ 16 min</span>
+                                <h4>The AI Revolution</h4>
+                                <p>How AI went from science fiction to everyday reality</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Timeline Section -->
+            <article>
+                <h2>⏳ AI Timeline: Key Milestones</h2>
+                
+                <div class="timeline">
+                    <!-- Ancient & Early History -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">Ancient</div>
+                        <div class="timeline-content">
+                            <h3>🏛️ Myths & Automatons</h3>
+                            <p><strong>Greek mythology:</strong> Talos, a bronze automaton protecting Crete</p>
+                            <p><strong>Medieval period:</strong> Mechanical dolls and clockwork devices</p>
+                            <p>The dream of artificial beings dates back millennia, appearing in myths, stories, and early mechanical inventions.</p>
+                        </div>
+                    </div>
+
+                    <!-- 1950s: The Birth -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">1950</div>
+                        <div class="timeline-content">
+                            <h3>🎯 The Turing Test</h3>
+                            <p><strong>Alan Turing</strong> publishes "Computing Machinery and Intelligence"</p>
+                            <p>Proposes the famous question: "Can machines think?" Introduces what becomes known as the Turing Test—a machine's ability to exhibit intelligent behavior indistinguishable from a human.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1956</div>
+                        <div class="timeline-content">
+                            <h3>🏁 AI is Born</h3>
+                            <p><strong>Dartmouth Conference:</strong> The term "Artificial Intelligence" is coined</p>
+                            <p>John McCarthy, Marvin Minsky, Claude Shannon, and others gather for a 6-week workshop. This is considered the official birth of AI as a field.</p>
+                        </div>
+                    </div>
+
+                    <!-- 1960s: Early Optimism -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">1966</div>
+                        <div class="timeline-content">
+                            <h3>💬 ELIZA: The First Chatbot</h3>
+                            <p><strong>Joseph Weizenbaum</strong> creates ELIZA at MIT</p>
+                            <p>A natural language processing program that simulates a Rogerian psychotherapist. Demonstrates how machines can engage in seemingly meaningful conversation.</p>
+                        </div>
+                    </div>
+
+                    <!-- 1970s: First AI Winter -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">1974-80</div>
+                        <div class="timeline-content">
+                            <h3>❄️ First AI Winter</h3>
+                            <p><strong>Funding cuts and disillusionment</strong></p>
+                            <p>Overpromising and underdelivering leads to reduced funding. AI systems can't handle real-world complexity. The Lighthill Report criticizes AI research, leading to major funding cuts.</p>
+                        </div>
+                    </div>
+
+                    <!-- 1980s: Expert Systems Boom -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">1980s</div>
+                        <div class="timeline-content">
+                            <h3>🧠 Expert Systems Era</h3>
+                            <p><strong>AI becomes commercially viable</strong></p>
+                            <p>Expert systems like XCON save companies millions. Japan's Fifth Generation Computer Project invests heavily. AI industry worth over $1 billion by 1985.</p>
+                        </div>
+                    </div>
+
+                    <!-- 1990s: Second AI Winter & Recovery -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">1987-93</div>
+                        <div class="timeline-content">
+                            <h3>❄️ Second AI Winter</h3>
+                            <p><strong>Expert systems fail to scale</strong></p>
+                            <p>Desktop computers outperform expensive specialized hardware. Expert systems prove brittle and difficult to maintain. Another period of reduced funding and interest.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">1997</div>
+                        <div class="timeline-content">
+                            <h3>♟️ Deep Blue Defeats Kasparov</h3>
+                            <p><strong>IBM's supercomputer</strong> beats world chess champion</p>
+                            <p>Deep Blue defeats Garry Kasparov in a historic match, proving AI can outperform humans in complex strategic games. A watershed moment for AI credibility.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2000s: Machine Learning Rises -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">2006</div>
+                        <div class="timeline-content">
+                            <h3>🔄 Deep Learning Renaissance</h3>
+                            <p><strong>Geoffrey Hinton</strong> and team show deep learning works</p>
+                            <p>Breakthrough in training deep neural networks. The term "deep learning" gains traction. Beginning of the modern AI revolution.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2010s: AI Explosion -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">2011</div>
+                        <div class="timeline-content">
+                            <h3>🎙️ IBM Watson Wins Jeopardy!</h3>
+                            <p><strong>Natural language processing breakthrough</strong></p>
+                            <p>Watson defeats human champions at Jeopardy!, showcasing advanced NLP and knowledge retrieval capabilities.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2012</div>
+                        <div class="timeline-content">
+                            <h3>👁️ AlexNet & ImageNet</h3>
+                            <p><strong>Convolutional Neural Networks revolutionize computer vision</strong></p>
+                            <p>AlexNet wins ImageNet competition with unprecedented accuracy. Proves deep learning's superiority in image recognition. Kickstarts modern deep learning boom.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2014</div>
+                        <div class="timeline-content">
+                            <h3>🤖 Generative Adversarial Networks (GANs)</h3>
+                            <p><strong>Ian Goodfellow</strong> introduces GANs</p>
+                            <p>Revolutionary approach to generative AI. Two neural networks compete, creating incredibly realistic synthetic data. Foundation for modern image and video generation.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2016</div>
+                        <div class="timeline-content">
+                            <h3>🎮 AlphaGo Defeats Lee Sedol</h3>
+                            <p><strong>DeepMind's AI masters Go</strong></p>
+                            <p>AlphaGo defeats world champion Lee Sedol 4-1 in Go, a game exponentially more complex than chess. Uses deep reinforcement learning and Monte Carlo tree search.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2017</div>
+                        <div class="timeline-content">
+                            <h3>🔄 Transformers Architecture</h3>
+                            <p><strong>Google introduces "Attention is All You Need"</strong></p>
+                            <p>Transformer architecture revolutionizes NLP. Foundation for BERT, GPT, and all modern large language models. The most important AI paper of the decade.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-content">
+                            <h3>📝 GPT-1 Released</h3>
+                            <p><strong>OpenAI introduces first GPT</strong></p>
+                            <p>Demonstrates that large language models can perform many tasks through unsupervised learning. Shows the potential of scaling transformer models.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2020s: AI Goes Mainstream -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">2020</div>
+                        <div class="timeline-content">
+                            <h3>🧬 AlphaFold Solves Protein Folding</h3>
+                            <p><strong>DeepMind cracks 50-year-old grand challenge</strong></p>
+                            <p>AlphaFold predicts 3D protein structures with near-experimental accuracy. Revolutionizes biology and drug discovery. AI's most significant scientific breakthrough.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2020</div>
+                        <div class="timeline-content">
+                            <h3>🚀 GPT-3 Released</h3>
+                            <p><strong>175 billion parameters change everything</strong></p>
+                            <p>OpenAI's GPT-3 demonstrates emergent abilities at scale. Can write code, poetry, essays, and more with minimal prompting. AI enters public consciousness.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-content">
+                            <h3>🎨 DALL-E & Stable Diffusion</h3>
+                            <p><strong>Text-to-image AI becomes accessible</strong></p>
+                            <p>DALL-E (OpenAI) and Stable Diffusion democratize AI image generation. Anyone can create professional-quality images from text descriptions.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2022</div>
+                        <div class="timeline-content">
+                            <h3>💬 ChatGPT Launch</h3>
+                            <p><strong>AI goes truly mainstream</strong></p>
+                            <p>ChatGPT reaches 100 million users in 2 months—the fastest-growing consumer app in history. Demonstrates the power of conversational AI to the world.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">
+                            <h3>🌟 Multimodal AI & GPT-4</h3>
+                            <p><strong>The year of Generative AI</strong></p>
+                            <p>GPT-4, Claude, PaLM 2, Llama 2 advance capabilities. Multimodal models process text, images, and audio. AI assistants become daily tools for millions.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024-26</div>
+                        <div class="timeline-content">
+                            <h3>🚀 AI Agents & Reasoning</h3>
+                            <p><strong>From tools to autonomous agents</strong></p>
+                            <p>AI systems that can reason, plan, and execute complex tasks. Agentic AI, improved reasoning models, and multimodal capabilities. AI becomes embedded in everything.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Eras Section -->
+            <article>
+                <h2>🎭 The Seven Eras of AI</h2>
+                
+                <div class="era-section">
+                    <div class="era-title">
+                        <span class="era-icon">🌱</span>
+                        <span>Era 1: The Dream (Ancient - 1950)</span>
+                    </div>
+                    <p><strong>Characteristics:</strong> Philosophical speculation, mechanical automatons, early computing</p>
+                    <p><strong>Key Ideas:</strong> Can machines think? What is intelligence? Formal logic as computation.</p>
+                    <p><strong>Limitation:</strong> No actual AI—just dreams, theories, and primitive machines</p>
+                </div>
+
+                <div class="era-section">
+                    <div class="era-title">
+                        <span class="era-icon">🎉</span>
+                        <span>Era 2: Birth & Optimism (1950-1974)</span>
+                    </div>
+                    <p><strong>Characteristics:</strong> Symbolic AI, problem-solving programs, early NLP</p>
+                    <p><strong>Achievements:</strong> ELIZA, logic theorem prover, game-playing programs</p>
+                    <p><strong>Promise:</strong> "Machines will match human intelligence in 20 years!"</p>
+                    <p><strong>Reality:</strong> Systems struggled with real-world complexity</p>
+                </div>
+
+                <div class="era-section">
+                    <div class="era-title">
+                        <span class="era-icon">❄️</span>
+                        <span>Era 3: First AI Winter (1974-1980)</span>
+                    </div>
+                    <p><strong>Characteristics:</strong> Funding cuts, disillusionment, criticism</p>
+                    <p><strong>Causes:</strong> Overpromising, computational limits, inability to scale</p>
+                    <p><strong>Impact:</strong> "AI" becomes a dirty word in research funding</p>
+                    <p><strong>Lesson:</strong> Don't overpromise—manage expectations</p>
+                </div>
+
+                <div class="era-section">
+                    <div class="era-title">
+                        <span class="era-icon">💼</span>
+                        <span>Era 4: Expert Systems Boom (1980-1987)</span>
+                    </div>
+                    <p><strong>Characteristics:</strong> Knowledge-based systems, commercial success</p>
+                    <p><strong>Achievements:</strong> XCON, MYCIN, corporate AI departments</p>
+                    <p><strong>Business Impact:</strong> Billion-dollar AI industry emerges</p>
+                    <p><strong>Limitation:</strong> Brittle, expensive to maintain, couldn't learn</p>
+                </div>
+
+                <div class="era-section">
+                    <div class="era-title">
+                        <span class="era-icon">❄️</span>
+                        <span>Era 5: Second AI Winter (1987-1993)</span>
+                    </div>
+                    <p><strong>Characteristics:</strong> Expert systems fail to scale, market collapse</p>
+                    <p><strong>Causes:</strong> Hardware costs drop, desktop PCs outperform specialized systems</p>
+                    <p><strong>Impact:</strong> Companies abandon AI, researchers avoid the term</p>
+                    <p><strong>Silver Lining:</strong> Focus shifts to machine learning</p>
+                </div>
+
+                <div class="era-section">
+                    <div class="era-title">
+                        <span class="era-icon">🔬</span>
+                        <span>Era 6: Machine Learning Rise (1993-2012)</span>
+                    </div>
+                    <p><strong>Characteristics:</strong> Data-driven approaches, statistical methods</p>
+                    <p><strong>Breakthroughs:</strong> SVMs, random forests, deep learning foundations</p>
+                    <p><strong>Applications:</strong> Spam filters, recommendation systems, computer vision</p>
+                    <p><strong>Shift:</strong> From hand-coded rules to learning from data</p>
+                </div>
+
+                <div class="era-section">
+                    <div class="era-title">
+                        <span class="era-icon">🚀</span>
+                        <span>Era 7: Deep Learning Revolution (2012-Present)</span>
+                    </div>
+                    <p><strong>Characteristics:</strong> Neural networks, big data, massive compute</p>
+                    <p><strong>Breakthroughs:</strong> ImageNet, AlphaGo, GPT, DALL-E, ChatGPT</p>
+                    <p><strong>Impact:</strong> AI everywhere—phones, cars, homes, work</p>
+                    <p><strong>Current State:</strong> Transformative technology affecting all industries</p>
+                </div>
+            </article>
+
+            <!-- Pioneers Section -->
+            <article>
+                <h2>🌟 AI Pioneers & Visionaries</h2>
+                
+                <div class="pioneers-grid">
+                    <div class="pioneer-card">
+                        <div class="pioneer-name">Alan Turing</div>
+                        <div class="pioneer-contribution">"Can machines think?"</div>
+                        <p>Father of theoretical computer science. Created the Turing Test. Cracked Enigma code in WWII. Laid foundations for AI philosophy.</p>
+                    </div>
+
+                    <div class="pioneer-card">
+                        <div class="pioneer-name">John McCarthy</div>
+                        <div class="pioneer-contribution">Coined "Artificial Intelligence"</div>
+                        <p>Organized Dartmouth Conference (1956). Invented LISP programming language. Pioneer of AI as a field.</p>
+                    </div>
+
+                    <div class="pioneer-card">
+                        <div class="pioneer-name">Marvin Minsky</div>
+                        <div class="pioneer-contribution">Co-founder of MIT AI Lab</div>
+                        <p>Pioneered neural networks and robotics. Wrote "Perceptrons" and "The Society of Mind." Shaped AI research for decades.</p>
+                    </div>
+
+                    <div class="pioneer-card">
+                        <div class="pioneer-name">Geoffrey Hinton</div>
+                        <div class="pioneer-contribution">"Godfather of Deep Learning"</div>
+                        <p>Revolutionized neural networks with backpropagation. Made deep learning practical. Turing Award winner (2018).</p>
+                    </div>
+
+                    <div class="pioneer-card">
+                        <div class="pioneer-name">Yann LeCun</div>
+                        <div class="pioneer-contribution">Convolutional Neural Networks</div>
+                        <p>Pioneered CNNs for computer vision. Chief AI Scientist at Meta. Turing Award winner (2018).</p>
+                    </div>
+
+                    <div class="pioneer-card">
+                        <div class="pioneer-name">Yoshua Bengio</div>
+                        <div class="pioneer-contribution">Deep Learning Pioneer</div>
+                        <p>Advanced sequence learning and generative models. Turing Award winner (2018). Co-author of "Deep Learning" textbook.</p>
+                    </div>
+
+                    <div class="pioneer-card">
+                        <div class="pioneer-name">Fei-Fei Li</div>
+                        <div class="pioneer-contribution">ImageNet Creator</div>
+                        <p>Built ImageNet dataset that revolutionized computer vision. Pioneered AI ethics. Stanford AI Lab director.</p>
+                    </div>
+
+                    <div class="pioneer-card">
+                        <div class="pioneer-name">Andrew Ng</div>
+                        <div class="pioneer-contribution">Democratized AI Education</div>
+                        <p>Co-founded Coursera and deeplearning.ai. Google Brain founder. Made AI accessible to millions.</p>
+                    </div>
+
+                    <div class="pioneer-card">
+                        <div class="pioneer-name">Demis Hassabis</div>
+                        <div class="pioneer-contribution">DeepMind Founder</div>
+                        <p>Created AlphaGo and AlphaFold. Combines neuroscience and AI. Solving grand challenges with AI.</p>
+                    </div>
+
+                    <div class="pioneer-card">
+                        <div class="pioneer-name">Ian Goodfellow</div>
+                        <div class="pioneer-contribution">Invented GANs</div>
+                        <p>Created Generative Adversarial Networks. Revolutionized generative AI. Co-author of "Deep Learning."</p>
+                    </div>
+
+                    <div class="pioneer-card">
+                        <div class="pioneer-name">Ilya Sutskever</div>
+                        <div class="pioneer-contribution">Co-founder of OpenAI</div>
+                        <p>Chief Scientist at OpenAI. Key architect of GPT models. Pioneer in deep learning and scaling.</p>
+                    </div>
+
+                    <div class="pioneer-card">
+                        <div class="pioneer-name">Sam Altman</div>
+                        <div class="pioneer-contribution">OpenAI CEO</div>
+                        <p>Leading the AGI mission. Made AI mainstream with ChatGPT. Advocating for safe AI development.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Key Breakthroughs -->
+            <article>
+                <h2>💡 Breakthrough Technologies</h2>
+                
+                <div class="success-box">
+                    <h4>🧠 Neural Networks</h4>
+                    <p><strong>1940s-1980s:</strong> Inspired by biological brains. McCulloch-Pitts neurons, Perceptrons, Backpropagation.</p>
+                    <p><strong>Impact:</strong> Foundation of all modern deep learning. Can learn complex patterns from data.</p>
+                </div>
+
+                <div class="success-box">
+                    <h4>👁️ Convolutional Neural Networks (CNNs)</h4>
+                    <p><strong>1980s-2012:</strong> LeNet for digit recognition. AlexNet revolution (2012).</p>
+                    <p><strong>Impact:</strong> Made computer vision practical. Powers facial recognition, self-driving cars, medical imaging.</p>
+                </div>
+
+                <div class="success-box">
+                    <h4>🔄 Recurrent Neural Networks (RNNs)</h4>
+                    <p><strong>1980s-2015:</strong> LSTMs, GRUs for sequence processing. Speech recognition, translation.</p>
+                    <p><strong>Impact:</strong> Enabled AI to process sequences like speech, text, and time series data.</p>
+                </div>
+
+                <div class="success-box">
+                    <h4>🎯 Attention Mechanism</h4>
+                    <p><strong>2014-2017:</strong> Bahdanau attention, self-attention, transformers.</p>
+                    <p><strong>Impact:</strong> Revolutionary breakthrough. Foundation of GPT, BERT, and all modern LLMs.</p>
+                </div>
+
+                <div class="success-box">
+                    <h4>🔄 Transformers</h4>
+                    <p><strong>2017-Present:</strong> "Attention is All You Need" paper. Replaced RNNs for NLP.</p>
+                    <p><strong>Impact:</strong> Most important architecture of the AI era. Enables scaling to billions of parameters.</p>
+                </div>
+
+                <div class="success-box">
+                    <h4>🎨 Generative Adversarial Networks (GANs)</h4>
+                    <p><strong>2014-Present:</strong> Two networks compete to generate realistic data.</p>
+                    <p><strong>Impact:</strong> Revolutionary image generation. Led to deepfakes, style transfer, data augmentation.</p>
+                </div>
+
+                <div class="success-box">
+                    <h4>🎮 Reinforcement Learning</h4>
+                    <p><strong>1980s-Present:</strong> Q-learning, policy gradients, AlphaGo, AlphaZero.</p>
+                    <p><strong>Impact:</strong> AI that learns through trial and error. Games, robotics, autonomous systems.</p>
+                </div>
+
+                <div class="success-box">
+                    <h4>📚 Transfer Learning</h4>
+                    <p><strong>2010s-Present:</strong> Pre-train on large datasets, fine-tune for specific tasks.</p>
+                    <p><strong>Impact:</strong> Made AI accessible with less data. Foundation of BERT, GPT, and modern NLP.</p>
+                </div>
+
+                <div class="success-box">
+                    <h4>🔢 Large Language Models (LLMs)</h4>
+                    <p><strong>2018-Present:</strong> GPT, BERT, T5, PaLM, Claude, Llama.</p>
+                    <p><strong>Impact:</strong> AI that understands and generates human language. ChatGPT moment.</p>
+                </div>
+
+                <div class="success-box">
+                    <h4>🌈 Multimodal AI</h4>
+                    <p><strong>2021-Present:</strong> CLIP, Flamingo, GPT-4V. Process text, images, audio together.</p>
+                    <p><strong>Impact:</strong> AI that sees, hears, and understands like humans. More versatile and capable.</p>
+                </div>
+            </article>
+
+            <!-- Future Section -->
+            <article>
+                <h2>🔮 The Future of AI</h2>
+                
+                <h3>Near Term (2024-2027)</h3>
+                <div class="info-box">
+                    <ul>
+                        <li>🤖 <strong>AI Agents:</strong> Autonomous systems that can plan and execute complex tasks</li>
+                        <li>🧠 <strong>Better Reasoning:</strong> AI that can think logically and solve complex problems</li>
+                        <li>🌍 <strong>Multimodal Everything:</strong> Seamless integration of vision, language, audio</li>
+                        <li>💼 <strong>AI Everywhere:</strong> Embedded in every tool, device, and workflow</li>
+                        <li>🎯 <strong>Personalized AI:</strong> Custom models tailored to individuals and businesses</li>
+                    </ul>
+                </div>
+
+                <h3>Medium Term (2027-2035)</h3>
+                <div class="success-box">
+                    <ul>
+                        <li>🏥 <strong>AI Healthcare:</strong> Personalized medicine, early disease detection</li>
+                        <li>🔬 <strong>Scientific Discovery:</strong> AI accelerates research in all fields</li>
+                        <li>🤖 <strong>Robotics Boom:</strong> Physical AI agents in homes and workplaces</li>
+                        <li>🎓 <strong>AI Tutors:</strong> Personalized education for every student</li>
+                        <li>🌐 <strong>AGI Approach:</strong> Systems approaching human-level general intelligence</li>
+                    </ul>
+                </div>
+
+                <h3>Long Term (2035+)</h3>
+                <div class="warning-box">
+                    <h4>⚠️ The Big Questions</h4>
+                    <ul>
+                        <li><strong>AGI:</strong> Will we achieve Artificial General Intelligence?</li>
+                        <li><strong>ASI:</strong> Could we create Artificial Superintelligence?</li>
+                        <li><strong>Ethics:</strong> How do we ensure AI benefits all humanity?</li>
+                        <li><strong>Control:</strong> Can we maintain meaningful control?</li>
+                        <li><strong>Society:</strong> How will AI reshape human civilization?</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h4>💡 What This Means for You</h4>
+                    <p>Understanding AI's history helps you:</p>
+                    <ul>
+                        <li>✅ Appreciate the rapid pace of current progress</li>
+                        <li>✅ Learn from past cycles of hype and disappointment</li>
+                        <li>✅ Recognize which breakthroughs are truly significant</li>
+                        <li>✅ Position yourself for the AI-powered future</li>
+                        <li>✅ Contribute to building beneficial AI</li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Call to Action -->
+            <article style="text-align: center; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); padding: 60px 20px; border-radius: 20px;">
+                <h2 style="color: white; margin-bottom: 20px;">Ready to Be Part of AI History? 🚀</h2>
+                <p style="color: white; margin-bottom: 30px; font-size: 1.2rem;">Now that you understand where AI came from, learn the tools shaping its future!</p>
+                <a href="../index.html#objectives" class="btn" style="background: white; color: var(--primary-color); margin-right: 15px;">Start Learning</a>
+                <a href="prompt-engineering.html" class="btn" style="background: rgba(255, 255, 255, 0.2); color: white; border: 2px solid white;">Master Prompt Engineering</a>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p><strong>AI Mastery Program • 100% Free Forever</strong></p>
+        <p style="color: var(--success-color); font-weight: 700; margin: 15px 0;">
+            🎁 No Hidden Costs • No Upsells • Always Free
+        </p>
+        <p style="margin-top: 20px;">
+            <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="prompt-engineering.html"><i class="fas fa-lightbulb"></i> Prompt Guide</a>
+            <a href="ai-ethics.html"><i class="fas fa-shield-alt"></i> Ethics</a>
+        </p>
+        <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.7;">
+            © 2026 AI Mastery Program • All content freely available
+        </p>
+    </footer>
+</body>
+</html>

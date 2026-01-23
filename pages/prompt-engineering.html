@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Master prompt engineering to get 10x better AI results. Complete guide with templates, examples, and frameworks.">
+    <title>Complete Prompt Engineering Guide | AI Mastery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page-specific header background - AI Digital Brain */
+        header {
+            background: url('https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop');
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="back-nav">
+        <a href="../index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <div>
+            <a href="ai-ethics.html" style="margin: 0 10px;"><i class="fas fa-shield-alt"></i> Ethics</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <span class="header-badge">
+                🎁 100% FREE
+            </span>
+            <h1>🎯 Complete Prompt Engineering Guide</h1>
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .back-nav {
+            position: sticky;
+            top: 0;
+            background: rgba(30, 41, 59, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            text-align: center;
+            z-index: 100;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .back-nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        .back-nav a:hover {
+            color: var(--success-color);
+        }
+        
+        header {
+            background: 
+                linear-gradient(135deg, rgba(59, 130, 246, 0.88), rgba(139, 92, 246, 0.88)),
+                url('https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+            animation: glow 15s ease-in-out infinite;
+            z-index: 0;
+        }
+        
+        @keyframes glow {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 0.9; }
+        }
+        
+        header .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+            text-shadow: 
+                0 3px 15px rgba(0, 0, 0, 0.8),
+                0 0 40px rgba(59, 130, 246, 0.6),
+                0 1px 3px rgba(0, 0, 0, 1);
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+        }
+        
+        header p {
+            color: #ffffff;
+            text-shadow: 
+                0 2px 10px rgba(0, 0, 0, 0.9),
+                0 0 20px rgba(59, 130, 246, 0.4);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        
+        .stat-highlight {
+            background: rgba(255, 255, 255, 0.15);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        article {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin: 40px 0 20px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(99, 102, 241, 0.3);
+        }
+        
+        h2:first-child {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+        
+        h3 {
+            color: var(--success-color);
+            font-size: 1.5rem;
+            margin: 30px 0 15px;
+        }
+        
+        h4 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin: 20px 0 10px;
+        }
+        
+        p, li {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 25px;
+        }
+        
+        .comparison-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .bad-example {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid #ef4444;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .good-example {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid var(--success-color);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .framework-box {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid var(--primary-color);
+            margin: 30px 0;
+        }
+        
+        .formula {
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-align: center;
+            color: var(--success-color);
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        pre {
+            background: var(--code-bg);
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        code {
+            color: #10b981;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .tip-box {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid var(--warning-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .tip-box::before {
+            content: "💡 Pro Tip: ";
+            font-weight: 700;
+            color: var(--warning-color);
+        }
+        
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .checklist li::before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+        
+        .step-card {
+            background: rgba(99, 102, 241, 0.1);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+        
+        .step-card h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .template-card {
+            background: rgba(30, 41, 59, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .template-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, var(--success-color), #059669);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-box h2 {
+            color: white;
+            border: none;
+            margin: 0 0 20px;
+            padding: 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .comparison-box {
+                grid-template-columns: 1fr;
+            }
+            
+            article {
+                padding: 20px;
+            }
+            
+            .formula {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="back-nav">
+        <a href="../index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </nav>
+
+    <header>
+        <h1>🎯 Complete Prompt Engineering Guide</h1>
+        <p>Master the art of communicating with AI to get 10x better results</p>
+        <div class="stat-highlight">
+            ⏱️ Time Savings: 10-15 hours per week
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Video Section -->
+        <article>
+            <h2>📺 Video Tutorials</h2>
+            <p>Watch these expert-led tutorials to master prompt engineering:</p>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/jC4v5AS4RIM?rel=0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen
+                                frameborder="0"
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-badge">ESSENTIAL</span>
+                        <span class="video-duration">⏱ 10 min</span>
+                        <h4>The Art of Prompt Engineering</h4>
+                        <p>Learn the fundamentals of writing effective prompts for AI</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/_ZvnD73m40o?rel=0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen
+                                frameborder="0"
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-badge">ADVANCED</span>
+                        <span class="video-duration">⏱ 18 min</span>
+                        <h4>Advanced Prompting Techniques</h4>
+                        <p>Master chain-of-thought, few-shot learning, and role-based prompting</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/F_hJ2Ey4BNc?rel=0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen
+                                frameborder="0"
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-badge">PRACTICAL</span>
+                        <span class="video-duration">⏱ 12 min</span>
+                        <h4>Prompt Engineering for Real Work</h4>
+                        <p>Apply prompting skills to actual business and creative tasks</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <h2>🧠 Why Prompt Engineering Matters</h2>
+            
+            <div class="comparison-box">
+                <div class="bad-example">
+                    <h4>❌ Poor Prompt</h4>
+                    <p><strong>"Write about AI"</strong></p>
+                    <ul>
+                        <li>Vague, unclear output</li>
+                        <li>Requires multiple iterations</li>
+                        <li>Wastes time</li>
+                    </ul>
+                </div>
+                
+                <div class="good-example">
+                    <h4>✅ Great Prompt</h4>
+                    <p><strong>"Write a 500-word blog post explaining AI to small business owners, focusing on practical applications in customer service. Include 3 real-world examples and end with actionable next steps."</strong></p>
+                    <ul>
+                        <li>Specific, targeted output</li>
+                        <li>First-time quality</li>
+                        <li>Saves hours</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="tip-box">
+                Good prompt engineering can save you 10-15 hours per week. That's 500-750 hours per year!
+            </div>
+        </article>
+
+        <article class="framework-box">
+            <h2>📋 The Universal Prompt Framework</h2>
+            <p style="text-align: center;">Use this framework for ANY AI tool:</p>
+            
+            <div class="formula">
+                [ROLE] + [TASK] + [CONTEXT] + [FORMAT] + [CONSTRAINTS] + [EXAMPLES]
+            </div>
+
+            <div class="step-card">
+                <h4>1. ROLE (Who should the AI be?)</h4>
+                <pre><code>"You are an expert [profession/role] with [X years] of experience in [domain]"</code></pre>
+                <p><strong>Examples:</strong></p>
+                <ul>
+                    <li>"You are a senior software engineer specializing in React"</li>
+                    <li>"You are a marketing strategist for B2B SaaS companies"</li>
+                    <li>"You are a patient and encouraging teacher for beginners"</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <h4>2. TASK (What do you want?)</h4>
+                <pre><code>"Your task is to [specific action] that [achieves goal]"</code></pre>
+                <p><strong>Examples:</strong></p>
+                <ul>
+                    <li>"Your task is to write a cold email that converts prospects into meetings"</li>
+                    <li>"Analyze this code and identify performance bottlenecks"</li>
+                    <li>"Create a 7-day social media content calendar"</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <h4>3. CONTEXT (Why and for whom?)</h4>
+                <pre><code>"This is for [audience] who needs [outcome]. The background is [situation]"</code></pre>
+                <p><strong>Examples:</strong></p>
+                <ul>
+                    <li>"This is for first-time founders who need to understand cap tables"</li>
+                    <li>"I'm preparing for a client presentation next week. The client is skeptical about AI"</li>
+                    <li>"My team is overwhelmed with manual data entry from customer emails"</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <h4>4. FORMAT (How should it look?)</h4>
+                <pre><code>"Format the output as [structure]. Use [style/tone]"</code></pre>
+                <p><strong>Examples:</strong></p>
+                <ul>
+                    <li>"Format as a bullet-pointed list with headers. Use professional but friendly tone"</li>
+                    <li>"Provide a markdown table with 3 columns: Feature, Benefit, Example"</li>
+                    <li>"Write in the style of technical documentation with code examples"</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <h4>5. CONSTRAINTS (What are the limits?)</h4>
+                <pre><code>"Keep it [length]. Avoid [unwanted elements]. Must include [required elements]"</code></pre>
+                <p><strong>Examples:</strong></p>
+                <ul>
+                    <li>"Keep it under 300 words. Avoid jargon. Must include actionable next steps"</li>
+                    <li>"Don't use technical terms without explanation. Include at least 2 real examples"</li>
+                    <li>"Maximum 5 bullet points per section. Each point should be one sentence"</li>
+                </ul>
+            </div>
+
+            <div class="step-card">
+                <h4>6. EXAMPLES (Show what you mean)</h4>
+                <pre><code>"Here's an example of what I'm looking for: [example]"</code></pre>
+                <p><strong>Examples:</strong></p>
+                <ul>
+                    <li>"Like this: '[sample output]'"</li>
+                    <li>"Similar to how Apple describes their products—simple, benefit-focused"</li>
+                    <li>"Here are 2 examples of the tone I want: [examples]"</li>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <h2>🎯 Advanced Techniques</h2>
+            
+            <h3>Chain-of-Thought Prompting</h3>
+            <p>Get better reasoning by asking AI to think step-by-step:</p>
+            <pre><code>"Let's think through this step by step:
+1. First, analyze the problem
+2. Then, identify possible solutions
+3. Finally, recommend the best approach with reasoning
+
+Walk me through your reasoning at each step."</code></pre>
+
+            <h3>Few-Shot Learning</h3>
+            <p>Provide examples to teach the AI:</p>
+            <pre><code>"Convert casual messages to professional ones:
+
+Input: "hey can we talk tmrw?"
+Output: "Good morning! Would you be available for a discussion tomorrow?"
+
+Input: "thanks for the help dude"
+Output: "Thank you very much for your assistance."
+
+Now convert: "need the report asap"
+Output:"</code></pre>
+
+            <h3>Iterative Refinement</h3>
+            <p>Build on previous outputs:</p>
+            <pre><code>Prompt 1: "Write an outline for a blog post about remote work"
+[Get output]
+
+Prompt 2: "Great! Now expand section 3 into 3 detailed paragraphs"
+[Get output]
+
+Prompt 3: "Perfect! Now add statistics to support the claims"</code></pre>
+        </article>
+
+        <article>
+            <h2>💡 Quick Prompt Improvements</h2>
+            
+            <h3>Example 1: Writing</h3>
+            <div class="bad-example">
+                <h4>❌ Before</h4>
+                <p>"Write a blog post about productivity"</p>
+            </div>
+            
+            <div class="good-example" style="margin-top: 20px;">
+                <h4>✅ After</h4>
+                <p>"Write an 800-word blog post for busy professionals on 'The 5-Minute Productivity System.'</p>
+                <p><strong>Include:</strong></p>
+                <ul>
+                    <li>Hook with surprising statistic</li>
+                    <li>Personal anecdote</li>
+                    <li>3 actionable techniques (each 200 words)</li>
+                    <li>Tools/resources section</li>
+                    <li>Motivational conclusion</li>
+                </ul>
+                <p><strong>Tone:</strong> Conversational, encouraging, practical"</p>
+            </div>
+
+            <h3>Example 2: Analysis</h3>
+            <div class="bad-example">
+                <h4>❌ Before</h4>
+                <p>"Analyze this data"</p>
+            </div>
+            
+            <div class="good-example" style="margin-top: 20px;">
+                <h4>✅ After</h4>
+                <p>"You are a data analyst. Analyze this sales data for Q4 2025: [paste data]</p>
+                <p><strong>Provide:</strong></p>
+                <ol>
+                    <li>3 key trends with % changes</li>
+                    <li>Anomalies or unexpected patterns</li>
+                    <li>Comparison to industry benchmarks</li>
+                    <li>2 actionable recommendations with expected impact</li>
+                </ol>
+                <p><strong>Format:</strong> Executive summary (max 400 words)"</p>
+            </div>
+        </article>
+
+        <article>
+            <h2>📊 Prompt Quality Checklist</h2>
+            <p>Before sending any prompt, check:</p>
+            
+            <ul class="checklist">
+                <li><strong>Specific:</strong> Is it clear exactly what I want?</li>
+                <li><strong>Complete:</strong> Have I provided all necessary context?</li>
+                <li><strong>Constrained:</strong> Have I set appropriate boundaries?</li>
+                <li><strong>Formatted:</strong> Did I specify the desired output format?</li>
+                <li><strong>Testable:</strong> Can I objectively evaluate if the output is good?</li>
+                <li><strong>Actionable:</strong> Will the output be immediately useful?</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>📚 Prompt Templates Library</h2>
+            
+            <div class="template-grid">
+                <div class="template-card">
+                    <h4>📧 Email Response</h4>
+                    <pre><code>Draft a professional email response to:
+[paste email]
+
+Context: [your situation]
+Goal: [what you want]
+Tone: [professional/friendly]
+Length: [short/medium/long]
+
+Include:
+- Thank them for [thing]
+- Address [main points]
+- Suggest [your proposal]
+- Clear next steps</code></pre>
+                </div>
+
+                <div class="template-card">
+                    <h4>📱 Social Media Post</h4>
+                    <pre><code>Create a [platform] post about [topic]:
+- Hook (question or fact)
+- Value in 3 bullet points
+- Call-to-action
+- Hashtags (3-5)
+- Tone: [brand voice]
+- Length: [optimal]</code></pre>
+                </div>
+
+                <div class="template-card">
+                    <h4>📝 Meeting Summary</h4>
+                    <pre><code>Summarize this meeting:
+[paste transcript]
+
+Format:
+## Key Decisions
+## Action Items
+- [Person]: [Task] by [Date]
+## Discussion Points
+## Next Steps
+
+Under 300 words.</code></pre>
+                </div>
+
+                <div class="template-card">
+                    <h4>📄 Blog Post Outline</h4>
+                    <pre><code>Create outline on '[topic]' for [audience]:
+
+- 3 Title options
+- Meta description (155 chars)
+- Introduction
+- 4-5 Main Sections with:
+  * Key points (3-4 each)
+  * Examples needed
+- Conclusion + CTA
+- SEO keywords (5-7)</code></pre>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <h2>🎯 Measuring Prompt Effectiveness</h2>
+            <p>Track these metrics to improve:</p>
+            
+            <ol>
+                <li><strong>First-Time Success Rate:</strong> % of prompts that work without revision</li>
+                <li><strong>Iterations Needed:</strong> Average edits required per output</li>
+                <li><strong>Time to Result:</strong> Minutes from prompt to usable output</li>
+                <li><strong>Output Quality:</strong> Rate 1-10 how well it meets needs</li>
+                <li><strong>Reusability:</strong> Can this prompt be templated?</li>
+            </ol>
+            
+            <div class="tip-box">
+                Goal: 80% first-time success rate, averaging less than 5 minutes to great output
+            </div>
+        </article>
+
+        <article>
+            <h2>🚀 Next Steps</h2>
+            <ol>
+                <li><strong>Save This Guide:</strong> Bookmark for daily reference</li>
+                <li><strong>Start a Prompt Library:</strong> Document your best prompts</li>
+                <li><strong>Join Communities:</strong> Share and learn from others</li>
+                <li><strong>Practice Daily:</strong> The only way to improve</li>
+                <li><strong>Measure Results:</strong> Track your time savings</li>
+            </ol>
+            
+            <div class="tip-box">
+                Great prompt engineering is the difference between AI being a toy and a transformative tool for your work.
+            </div>
+        </article>
+    </div>
+
+    <footer style="background: var(--card-bg); padding: 40px 20px; text-align: center; margin-top: 60px;">
+        <p><strong>Part of the AI Mastery Program • 100% Free Forever</strong></p>
+        <p style="margin-top: 20px;">
+            <a href="../index.html" style="color: var(--primary-color); text-decoration: none; margin: 0 15px;">Home</a>
+            <a href="ai-ethics.html" style="color: var(--primary-color); text-decoration: none; margin: 0 15px;">AI Ethics</a>
+        </p>
+    </footer>
+</body>
+</html>

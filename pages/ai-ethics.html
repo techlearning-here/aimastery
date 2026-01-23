@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn to use AI responsibly and ethically. Complete guide on privacy, security, bias, and legal considerations.">
+    <title>AI Ethics & Responsible Use Guide | AI Mastery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #8b5cf6;
+            --success-color: #10b981;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --dark-bg: #0f1419;
+            --card-bg: #1a1f2e;
+            --text-primary: #f0fdf4;
+            --text-secondary: #d1fae5;
+            --accent-1: #06b6d4;
+            --accent-2: #10b981;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        
+        .back-nav {
+            position: sticky;
+            top: 0;
+            background: rgba(30, 41, 59, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            text-align: center;
+            z-index: 100;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .back-nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        
+        .back-nav a:hover {
+            color: var(--success-color);
+        }
+        
+        header {
+            background: 
+                linear-gradient(135deg, rgba(239, 68, 68, 0.88), rgba(220, 38, 38, 0.88)),
+                url('https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(239, 68, 68, 0.4);
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(239, 68, 68, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(245, 158, 11, 0.15) 0%, transparent 50%);
+            animation: glow 15s ease-in-out infinite;
+            z-index: 0;
+        }
+        
+        @keyframes glow {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 0.9; }
+        }
+        
+        header .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+            text-shadow: 
+                0 3px 15px rgba(0, 0, 0, 0.8),
+                0 0 40px rgba(239, 68, 68, 0.6),
+                0 1px 3px rgba(0, 0, 0, 1);
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+        }
+        
+        header p {
+            color: #ffffff;
+            text-shadow: 
+                0 2px 10px rgba(0, 0, 0, 0.9),
+                0 0 20px rgba(239, 68, 68, 0.4);
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        article {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: var(--danger-color);
+            font-size: 2rem;
+            margin: 40px 0 20px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(239, 68, 68, 0.3);
+        }
+        
+        h2:first-child {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+        
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin: 30px 0 15px;
+        }
+        
+        h4 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin: 20px 0 10px;
+        }
+        
+        p, li {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 25px;
+        }
+        
+        .good-box {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid var(--success-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .good-box h4::before {
+            content: "✅ ";
+            color: var(--success-color);
+        }
+        
+        .bad-box {
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid var(--danger-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .bad-box h4::before {
+            content: "❌ ";
+            color: var(--danger-color);
+        }
+        
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid var(--warning-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box h4::before {
+            content: "⚠️ ";
+            color: var(--warning-color);
+        }
+        
+        .principle-card {
+            background: rgba(99, 102, 241, 0.1);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 2px solid rgba(99, 102, 241, 0.3);
+        }
+        
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .checklist li {
+            padding: 10px;
+            margin: 5px 0;
+            background: rgba(99, 102, 241, 0.05);
+            border-radius: 4px;
+        }
+        
+        .checklist li::before {
+            content: "☐ ";
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-right: 10px;
+        }
+        
+        .red-flag {
+            background: rgba(239, 68, 68, 0.15);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        
+        .red-flag::before {
+            content: "🚨 ";
+        }
+        
+        .commitment-box {
+            background: linear-gradient(135deg, var(--success-color), #059669);
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+        
+        .commitment-box h2 {
+            color: white;
+            border: none;
+            margin: 0 0 20px;
+            padding: 0;
+        }
+        
+        .commitment-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .commitment-list li {
+            color: white;
+            padding: 8px 0;
+        }
+        
+        .commitment-list.will li::before {
+            content: "✅ ";
+            font-size: 1.2rem;
+        }
+        
+        .commitment-list.wont li::before {
+            content: "❌ ";
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            article {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="back-nav">
+        <a href="../index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </nav>
+
+    <header>
+        <h1>🛡️ AI Ethics & Responsible Use Guide</h1>
+        <p>A comprehensive guide to using AI tools responsibly, ethically, and safely</p>
+    </header>
+
+    <div class="container">
+        <article>
+            <h2>🎯 Why AI Ethics Matters</h2>
+            <p>AI is powerful, but with great power comes great responsibility. Using AI ethically means:</p>
+            <ul>
+                <li><strong>Protecting people:</strong> Not causing harm or perpetuating bias</li>
+                <li><strong>Maintaining trust:</strong> Being transparent about AI use</li>
+                <li><strong>Following laws:</strong> Complying with regulations and copyright</li>
+                <li><strong>Ensuring quality:</strong> Verifying and validating AI outputs</li>
+                <li><strong>Respecting privacy:</strong> Handling data responsibly</li>
+            </ul>
+        </article>
+
+        <!-- Video Section -->
+        <article>
+            <h2>📺 Watch: Understanding AI Ethics</h2>
+            <p>Learn from experts about the ethical implications of AI:</p>
+            
+            <div class="video-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px;">
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/AaU6tI2pb3M?rel=0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen
+                                frameborder="0"
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-badge">ESSENTIAL</span>
+                        <span class="video-duration">⏱ 15 min</span>
+                        <h4>Ethics of AI - Introduction</h4>
+                        <p>Understanding the fundamental ethical challenges in AI development and use</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/mUexxfQDfrY?rel=0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen
+                                frameborder="0"
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-badge">PRACTICAL</span>
+                        <span class="video-duration">⏱ 12 min</span>
+                        <h4>AI Bias and Fairness</h4>
+                        <p>How to recognize and mitigate bias in AI systems</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/Ok-EvvvHY2o?rel=0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen
+                                frameborder="0"
+                                loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <span class="video-badge">DEEP DIVE</span>
+                        <span class="video-duration">⏱ 20 min</span>
+                        <h4>Privacy and AI</h4>
+                        <p>Protecting personal data in the age of artificial intelligence</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <h2>🚨 Core Ethical Principles</h2>
+            
+            <div class="principle-card">
+                <h3>1. Transparency & Disclosure</h3>
+                <p><strong>Always disclose when content is AI-generated</strong>, especially in:</p>
+                <ul>
+                    <li>Academic work and research</li>
+                    <li>Professional publications</li>
+                    <li>Client deliverables</li>
+                    <li>Public communications</li>
+                    <li>Creative works</li>
+                </ul>
+                
+                <div class="good-box">
+                    <h4>Appropriate Disclosure</h4>
+                    <ul>
+                        <li>"This article was written with AI assistance and edited by [human]"</li>
+                        <li>"Image generated with Midjourney and refined manually"</li>
+                        <li>"Research compiled using Perplexity AI, verified by [human]"</li>
+                    </ul>
+                </div>
+                
+                <div class="bad-box">
+                    <h4>Don't Do This</h4>
+                    <ul>
+                        <li>Presenting AI-generated content as entirely human-created</li>
+                        <li>Using AI to impersonate others</li>
+                        <li>Hiding AI involvement in critical decisions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="principle-card">
+                <h3>2. Verification & Accuracy</h3>
+                <p><strong>Never trust AI output blindly.</strong> Always:</p>
+                
+                <div class="good-box">
+                    <h4>Verification Checklist</h4>
+                    <ul>
+                        <li><strong>Fact-Check:</strong> Verify statistics, quotes, and claims</li>
+                        <li><strong>Cross-Reference:</strong> Check multiple sources</li>
+                        <li><strong>Expert Review:</strong> Have domain experts validate technical content</li>
+                        <li><strong>Test Code:</strong> Run and test AI-generated code thoroughly</li>
+                        <li><strong>Legal Review:</strong> Have lawyers review legal AI outputs</li>
+                    </ul>
+                </div>
+                
+                <div class="warning-box">
+                    <h4>AI Hallucinations</h4>
+                    <p>AI can confidently state false information. <strong>Always verify:</strong></p>
+                    <ul>
+                        <li>Historical facts and dates</li>
+                        <li>Scientific claims</li>
+                        <li>Legal precedents</li>
+                        <li>Statistical data</li>
+                        <li>Technical specifications</li>
+                        <li>Citations and sources</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="principle-card">
+                <h3>3. Privacy & Data Protection</h3>
+                
+                <div class="bad-box">
+                    <h4>What NOT to Share with AI</h4>
+                    <ul>
+                        <li>Passwords or API keys</li>
+                        <li>Personal Identifiable Information (PII)</li>
+                        <li>Confidential business data</li>
+                        <li>Patient medical records (HIPAA protected)</li>
+                        <li>Financial account details</li>
+                        <li>Trade secrets or proprietary information</li>
+                        <li>Attorney-client privileged information</li>
+                    </ul>
+                </div>
+                
+                <div class="good-box">
+                    <h4>Best Practices</h4>
+                    <ul>
+                        <li>Anonymize data before input</li>
+                        <li>Use placeholder names/values</li>
+                        <li>Check company AI usage policies</li>
+                        <li>Use privacy-focused AI tools when needed</li>
+                        <li>Understand where your data is stored</li>
+                        <li>Enable privacy modes when available</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="principle-card">
+                <h3>4. Bias & Fairness</h3>
+                <p>AI models can perpetuate and amplify biases. Be aware:</p>
+                
+                <div class="warning-box">
+                    <h4>Common Biases</h4>
+                    <ul>
+                        <li><strong>Gender bias:</strong> Stereotypical career associations</li>
+                        <li><strong>Racial bias:</strong> Underrepresentation or stereotypes</li>
+                        <li><strong>Age bias:</strong> Assumptions about capabilities</li>
+                        <li><strong>Cultural bias:</strong> Western-centric perspectives</li>
+                        <li><strong>Socioeconomic bias:</strong> Privilege assumptions</li>
+                    </ul>
+                </div>
+                
+                <div class="good-box">
+                    <h4>How to Mitigate</h4>
+                    <ul>
+                        <li>Review outputs for bias and stereotypes</li>
+                        <li>Use inclusive language in prompts</li>
+                        <li>Test outputs from diverse perspectives</li>
+                        <li>Manually edit to ensure fairness</li>
+                        <li>Get diverse feedback on content</li>
+                        <li>Challenge problematic outputs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="principle-card">
+                <h3>5. Copyright & Intellectual Property</h3>
+                <p><strong>Key Rules:</strong></p>
+                <ul>
+                    <li>AI-generated content may not be copyrightable (varies by jurisdiction)</li>
+                    <li>AI trained on copyrighted material raises legal questions</li>
+                    <li>Using AI doesn't exempt you from copyright law</li>
+                    <li>Respect original creators and attribution</li>
+                </ul>
+                
+                <div class="good-box">
+                    <h4>Best Practices</h4>
+                    <ul>
+                        <li>Understand terms of service for each AI tool</li>
+                        <li>Don't use AI to recreate copyrighted works</li>
+                        <li>Give credit when using AI for derivative works</li>
+                        <li>Purchase appropriate licenses when needed</li>
+                        <li>Consult legal counsel for commercial use</li>
+                        <li>Respect "living artist" restrictions (e.g., Midjourney)</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <h2>📋 AI Use Policy Checklist</h2>
+            <p>Before using AI for any project, check:</p>
+            
+            <h3>Academic Context</h3>
+            <ul class="checklist">
+                <li>Does my institution allow AI use for this assignment?</li>
+                <li>Have I cited AI assistance properly?</li>
+                <li>Is my work still primarily my own intellectual contribution?</li>
+                <li>Have I verified all facts and sources?</li>
+                <li>Would this be considered plagiarism?</li>
+            </ul>
+            
+            <h3>Professional Context</h3>
+            <ul class="checklist">
+                <li>Does my company have an AI use policy?</li>
+                <li>Am I allowed to use external AI tools with company data?</li>
+                <li>Should I disclose AI use to clients?</li>
+                <li>Have I verified accuracy for business decisions?</li>
+                <li>Am I maintaining data security standards?</li>
+            </ul>
+            
+            <h3>Creative Context</h3>
+            <ul class="checklist">
+                <li>Am I respecting copyright and attribution?</li>
+                <li>Is disclosure appropriate for my audience?</li>
+                <li>Have I added sufficient human creativity?</li>
+                <li>Am I avoiding prohibited content (violence, hate, etc.)?</li>
+                <li>Do I understand ownership rights?</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>🚨 Red Flags - Don't Do This!</h2>
+            <p>Unethical uses of AI that you must avoid:</p>
+            
+            <div class="red-flag">Using AI to generate fake reviews or testimonials</div>
+            <div class="red-flag">Creating deepfakes or impersonations</div>
+            <div class="red-flag">Automating spam or manipulation</div>
+            <div class="red-flag">Using AI for surveillance without consent</div>
+            <div class="red-flag">Generating misleading information intentionally</div>
+            <div class="red-flag">Replacing human judgment in critical decisions</div>
+            <div class="red-flag">Using AI for illegal activities</div>
+            <div class="red-flag">Sharing sensitive or private data with AI</div>
+        </article>
+
+        <article>
+            <h2>📊 Responsible AI Workflow</h2>
+            
+            <h3>Before Using AI</h3>
+            <ol>
+                <li><strong>Check policies:</strong> Company, school, client agreements</li>
+                <li><strong>Consider alternatives:</strong> Is AI necessary?</li>
+                <li><strong>Identify risks:</strong> Privacy, bias, accuracy concerns</li>
+                <li><strong>Plan oversight:</strong> How will you verify quality?</li>
+            </ol>
+            
+            <h3>During Use</h3>
+            <ol>
+                <li><strong>Anonymize data:</strong> Remove sensitive information</li>
+                <li><strong>Use good prompts:</strong> Clear, unbiased instructions</li>
+                <li><strong>Review outputs:</strong> Check for bias, errors, appropriateness</li>
+                <li><strong>Document process:</strong> Track AI usage</li>
+            </ol>
+            
+            <h3>After Use</h3>
+            <ol>
+                <li><strong>Verify accuracy:</strong> Fact-check all claims</li>
+                <li><strong>Edit for bias:</strong> Remove stereotypes and unfairness</li>
+                <li><strong>Add disclosure:</strong> Note AI assistance</li>
+                <li><strong>Get feedback:</strong> Have humans review</li>
+                <li><strong>Measure impact:</strong> Track outcomes and issues</li>
+            </ol>
+        </article>
+
+        <article>
+            <h2>🎯 Decision Framework: Should I Use AI?</h2>
+            <p>Ask yourself these questions:</p>
+            
+            <h3>1. Is it legal and allowed?</h3>
+            <ul>
+                <li>Company policy permits</li>
+                <li>No contractual violations</li>
+                <li>Compliant with regulations</li>
+                <li>No prohibited content</li>
+            </ul>
+            
+            <h3>2. Is it ethical?</h3>
+            <ul>
+                <li>Transparent and disclosed</li>
+                <li>Not harming others</li>
+                <li>Respecting privacy</li>
+                <li>Avoiding bias</li>
+            </ul>
+            
+            <h3>3. Is it effective?</h3>
+            <ul>
+                <li>AI is right tool for task</li>
+                <li>Output quality acceptable</li>
+                <li>Time savings worthwhile</li>
+                <li>Human oversight feasible</li>
+            </ul>
+            
+            <h3>4. Is it verifiable?</h3>
+            <ul>
+                <li>Can fact-check outputs</li>
+                <li>Can test functionality</li>
+                <li>Expert review available</li>
+                <li>Quality measurable</li>
+            </ul>
+            
+            <div class="bad-box">
+                <h4>Important Rule</h4>
+                <p><strong>If NO to any category → Reconsider or seek guidance</strong></p>
+            </div>
+        </article>
+
+        <div class="commitment-box">
+            <h2>✅ Your Ethics Commitment</h2>
+            <p style="color: white; margin-bottom: 20px;">As you progress through this course, commit to:</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                <div>
+                    <h3 style="color: white;">I WILL:</h3>
+                    <ul class="commitment-list will">
+                        <li>Use AI transparently and disclose when appropriate</li>
+                        <li>Verify all AI outputs before relying on them</li>
+                        <li>Protect privacy and handle data responsibly</li>
+                        <li>Watch for and mitigate bias in AI outputs</li>
+                        <li>Respect copyright and intellectual property</li>
+                        <li>Follow all applicable laws and policies</li>
+                        <li>Maintain human oversight and accountability</li>
+                        <li>Use AI to augment, not replace, human judgment</li>
+                        <li>Continuously learn about AI ethics</li>
+                        <li>Speak up when I see unethical AI use</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: white;">I WILL NOT:</h3>
+                    <ul class="commitment-list wont">
+                        <li>Deceive others about AI use</li>
+                        <li>Share sensitive or private data with AI</li>
+                        <li>Use AI to harm, manipulate, or exploit</li>
+                        <li>Blindly trust AI outputs without verification</li>
+                        <li>Violate copyright or plagiarize with AI</li>
+                        <li>Use AI for illegal activities</li>
+                        <li>Automate away accountability</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <article>
+            <h2>🤝 Join the Responsible AI Movement</h2>
+            <ul>
+                <li><strong>Share this guide</strong> with others learning AI</li>
+                <li><strong>Report issues</strong> when you encounter unethical AI use</li>
+                <li><strong>Contribute:</strong> Share your ethical considerations and learnings</li>
+                <li><strong>Stay updated:</strong> AI ethics is evolving—keep learning</li>
+            </ul>
+            
+            <div class="good-box">
+                <h4>Remember</h4>
+                <p>The goal isn't to avoid AI, but to use it wisely, responsibly, and ethically for the benefit of all.</p>
+            </div>
+        </article>
+    </div>
+
+    <footer style="background: var(--card-bg); padding: 40px 20px; text-align: center; margin-top: 60px;">
+        <p><strong>Part of the AI Mastery Program • 100% Free Forever</strong></p>
+        <p style="margin-top: 20px;">
+            <a href="../index.html" style="color: var(--primary-color); text-decoration: none; margin: 0 15px;">Home</a>
+            <a href="prompt-engineering.html" style="color: var(--primary-color); text-decoration: none; margin: 0 15px;">Prompt Engineering</a>
+        </p>
+    </footer>
+</body>
+</html>
