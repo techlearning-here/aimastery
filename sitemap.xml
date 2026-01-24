@@ -7,7 +7,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://aitechmint.com/</loc>
-        <lastmod>2026-01-22</lastmod>
+        <lastmod>2026-01-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -36,13 +36,21 @@
         <priority>0.9</priority>
     </url>
 
-    <!-- Add more pages as you create them -->
-    <!-- Example:
+    <!-- Tool Pages - Creative Category -->
     <url>
-        <loc>https://aitechmint.com/pages/chatgpt.html</loc>
-        <lastmod>2026-01-22</lastmod>
+        <loc>https://aitechmint.com/pages/creative/canva.html</loc>
+        <lastmod>2026-01-23</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Add more tool pages as you create them -->
+    <!-- Template:
+    <url>
+        <loc>https://aitechmint.com/pages/[category]/[tool-name].html</loc>
+        <lastmod>2026-01-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
     </url>
     -->
 

@@ -1,16 +1,31 @@
 # robots.txt for AI Tech Mint (aitechmint.com)
+# Last updated: 2026-01-23
 
+# Allow all search engines to crawl
 User-agent: *
 Allow: /
 Allow: /css/
 Allow: /js/
+Allow: /images/
 Allow: /pages/
 
-# Disallow documentation and backup files
+# Disallow internal documentation and backup files
 Disallow: /misc/
+Disallow: *.md
+Disallow: /download-images.sh
+Disallow: /download-and-update-images.py
+Disallow: /generate-fallback-icons.py
+Disallow: /update-to-local-images.py
 
-# Sitemap
+# Sitemap location
 Sitemap: https://aitechmint.com/sitemap.xml
 
-# Crawl delay (optional - prevents overwhelming server)
+# Crawl delay (prevents overwhelming server)
 Crawl-delay: 1
+
+# User-agent specific rules (optional)
+User-agent: Googlebot
+Crawl-delay: 0
+
+User-agent: Bingbot
+Crawl-delay: 0

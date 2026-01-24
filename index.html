@@ -1074,7 +1074,7 @@
             <section id="objectives" class="fade-in" style="margin-top: 30px;">
                 <h3 style="color: #ffffff; font-size: 2.2rem; margin-bottom: 15px; padding-top: 0; border-top: none; text-shadow: 0 3px 20px rgba(0, 0, 0, 1), 0 0 50px rgba(59, 130, 246, 0.8), 0 1px 3px rgba(0, 0, 0, 1);">Transform With These Skills</h3>
                 
-                <div style="text-align: center; margin-bottom: 30px; padding: 20px; background: rgba(16, 185, 129, 0.1); border-radius: 12px; border: 2px solid rgba(16, 185, 129, 0.3);">
+                <div style="text-align: center; margin-bottom: 30px; padding: 20px; background: rgba(16, 185, 129, 0.1); border-radius: 12px; border: 2px solid rgba(16, 185, 129, 0.3); pointer-events: none; transition: none !important; box-shadow: none !important;">
                     <p style="color: var(--success-color); font-size: 1.2rem; font-weight: 700; margin: 0;">
                         From beginner to expert, at your own pace.
                     </p>
@@ -1385,18 +1385,20 @@
                     </div>
                 </div>
                 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px;">
-                    <div style="background: rgba(139, 92, 246, 0.1); padding: 15px; border-radius: 10px; border: 2px solid rgba(139, 92, 246, 0.3);">
-                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-                            <img src="images/tools/canva.ico" alt="Canva" loading="lazy" style="width: 32px; height: 32px; border-radius: 6px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div style="display: none; width: 32px; height: 32px; border-radius: 6px; background: linear-gradient(135deg, #8b5cf6, #ec4899); align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">🎨</div>
-                            <div style="font-weight: 700; color: var(--text-primary);">Canva</div>
-                        </div>
-                        <div style="color: var(--text-secondary); font-size: 0.85rem; margin: 5px 0 8px;">Create stunning visuals with AI. Learn to design social media posts, presentations, and marketing materials without design skills.</div>
-                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem;">
+                    <a href="pages/creative/canva.html" style="text-decoration: none; display: block;">
+                        <div style="background: rgba(139, 92, 246, 0.1); padding: 15px; border-radius: 10px; border: 2px solid rgba(139, 92, 246, 0.3); transition: all 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(139, 92, 246, 0.3)'; this.style.borderColor='rgba(139, 92, 246, 0.6)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='rgba(139, 92, 246, 0.3)';">
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                                <img src="images/tools/canva.ico" alt="Canva" loading="lazy" style="width: 32px; height: 32px; border-radius: 6px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div style="display: none; width: 32px; height: 32px; border-radius: 6px; background: linear-gradient(135deg, #8b5cf6, #ec4899); align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;">🎨</div>
+                                <div style="font-weight: 700; color: var(--text-primary);">Canva</div>
+                            </div>
+                            <div style="color: var(--text-secondary); font-size: 0.85rem; margin: 5px 0 8px;">Create stunning visuals with AI. Learn to design social media posts, presentations, and marketing materials without design skills.</div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem;">
 <span style="color: #8b5cf6;">Beginner</span>
-                            <span style="color: var(--text-secondary); font-size: 0.75rem;">Coming Soon</span>
+                                <span style="color: #10b981; font-weight: 600; font-size: 0.75rem;">Learn Now →</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     <div style="background: rgba(139, 92, 246, 0.1); padding: 15px; border-radius: 10px; border: 2px solid rgba(139, 92, 246, 0.3);">
                         <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
                             <img src="images/tools/midjourney.svg" alt="Midjourney" loading="lazy" style="width: 32px; height: 32px; border-radius: 6px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
