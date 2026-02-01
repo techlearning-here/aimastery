@@ -1,0 +1,250 @@
+# ============================================================
+# TOOL PAGE DATA - Canva
+# ============================================================
+# This file contains all the content for the Canva tool page.
+# Copy this file and modify for other tools.
+# ============================================================
+
+# ------------------------------------------------------------
+# TOOL METADATA (Required)
+# ------------------------------------------------------------
+tool:
+  name: "Canva"
+  slug: "canva"
+  category: "creative"
+  emoji: "🎨"
+  short_title: "Complete Guide to Graphic Design Tool"
+  tagline: "Create stunning designs in minutes - No design skills required"
+  
+  # SEO
+  meta_description: "Learn Canva from scratch - Complete guide to design amazing graphics, presentations, social media posts, and more. Free tutorials, tips, and resources."
+  keywords: "Canva tutorial, Canva guide, learn Canva, Canva tips, graphic design, Canva Pro, design tool, visual content"
+  
+  # Hero gradient colors (optional - defaults to primary/secondary)
+  gradient_start: "var(--primary-color)"
+  gradient_end: "var(--secondary-color)"
+  
+  # CTA Configuration
+  cta_url: "https://www.canva.com/?utm_source=aitechmint&utm_medium=tool-page&utm_campaign=canva"
+  cta_text: "Start Free Trial →"
+  cta_subtitle: "Join 100M+ users creating stunning designs with Canva"
+  
+  # Final CTA text
+  final_cta_text: "Join 100M+ users who trust Canva for all their design needs. Get started free - no credit card required."
+  trust_points: "✓ Free Forever Plan • ✓ No Credit Card Required • ✓ Cancel Anytime"
+  
+  # Path configuration (for pages in different locations)
+  css_path: "../../css/styles.css"
+  home_path: "../../index.html"
+
+# ------------------------------------------------------------
+# PAGE CONTENT
+# ------------------------------------------------------------
+content:
+  # What Is [Tool]? Section
+  # Use HTML for rich formatting
+  what_is: |
+    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary);">
+        Canva is a free online graphic design platform that makes it incredibly easy to create professional-looking designs - even if you have zero design experience. With thousands of templates, a drag-and-drop interface, and millions of stock photos, you can create social media posts, presentations, posters, videos, logos, and much more in minutes.
+    </p>
+    
+    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary);">
+        Founded in 2013, Canva has revolutionized design by making it accessible to everyone. Whether you're a small business owner creating marketing materials, a student working on a presentation, or a social media manager designing posts, Canva provides the tools you need without the complexity of traditional design software like Photoshop or Illustrator.
+    </p>
+  
+  # Who is it for? (list format)
+  who_is_for:
+    - title: "Small Business Owners"
+      description: "Create marketing materials, social media content, and brand assets"
+    - title: "Social Media Managers"
+      description: "Design engaging posts, stories, and ads for all platforms"
+    - title: "Students & Educators"
+      description: "Make presentations, infographics, and educational materials"
+    - title: "Content Creators"
+      description: "Design thumbnails, banners, and promotional graphics"
+    - title: "Nonprofits"
+      description: "Create professional materials on a budget"
+    - title: "Anyone"
+      description: "who needs to create visual content quickly and easily"
+  
+  # YouTube video ID for overview (optional)
+  # overview_video_id: "PASTE_VIDEO_ID_HERE"
+  
+  # Key Features Section
+  features_intro: "Canva packs powerful design tools into an incredibly easy-to-use interface. Here are the features that make it stand out:"
+  
+  features:
+    - icon: "📐"
+      title: "Drag & Drop Editor"
+      description: "Intuitive interface that anyone can use. Just drag elements onto your canvas and customize - no learning curve required."
+      pro_tip: "Use the snap-to-grid feature to keep your designs perfectly aligned."
+    
+    - icon: "🎨"
+      title: "250,000+ Templates"
+      description: "Pre-designed templates for every need - social media, presentations, posters, business cards, and more."
+      pro_tip: "Filter templates by style (modern, minimal, bold) to find your perfect match quickly."
+    
+    - icon: "📸"
+      title: "100M+ Stock Photos & Graphics"
+      description: "Massive library of professional photos, illustrations, icons, and videos. Most free, with premium options available."
+      pro_tip: "Use the 'See More' button on elements to find similar alternatives."
+    
+    - icon: "🎬"
+      title: "Video Editor"
+      description: "Create and edit videos with the same ease as designing graphics. Add animations, transitions, and music."
+      pro_tip: "Use Canva's built-in music library to add royalty-free soundtracks."
+    
+    - icon: "👥"
+      title: "Team Collaboration"
+      description: "Work with your team in real-time. Share designs, leave comments, and manage brand assets in one place."
+      pro_tip: "Set up a Brand Kit to ensure consistent colors and fonts across all team designs."
+    
+    - icon: "🤖"
+      title: "AI-Powered Tools"
+      description: "Magic Resize, Background Remover, Text to Image, and more AI features to speed up your workflow."
+      pro_tip: "Magic Resize instantly adapts your design to different social media sizes."
+  
+  # Getting Started Section (HTML)
+  getting_started: |
+    <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 30px;">
+        Getting started with Canva is incredibly simple. Follow these steps to create your first design:
+    </p>
+    
+    <h3>Step 1: Create Your Account</h3>
+    <p style="color: var(--text-secondary); line-height: 1.8;">
+        Visit <a href="https://www.canva.com" target="_blank" style="color: var(--primary-color);">canva.com</a> and sign up for free using your email, Google, or Facebook account. No credit card required.
+    </p>
+    
+    <h3>Step 2: Choose a Template</h3>
+    <p style="color: var(--text-secondary); line-height: 1.8;">
+        Browse through thousands of templates or start from scratch. Use the search bar to find templates for your specific need (e.g., "Instagram post", "business card", "presentation").
+    </p>
+    
+    <h3>Step 3: Customize Your Design</h3>
+    <p style="color: var(--text-secondary); line-height: 1.8;">
+        Use the drag-and-drop editor to add your own text, images, and elements. Change colors, fonts, and layouts to match your brand.
+    </p>
+    
+    <h3>Step 4: Download or Share</h3>
+    <p style="color: var(--text-secondary); line-height: 1.8;">
+        Export your design in various formats (PNG, JPG, PDF, MP4) or share directly to social media platforms.
+    </p>
+  
+  # Pricing Section
+  pricing_summary: "Canva offers a Free Forever plan, Pro plan starting at $12.99/mo, and Teams plans for organizations."
+  
+  pricing:
+    - name: "Free"
+      price: "$0"
+      period: "/forever"
+      features:
+        - "250,000+ templates"
+        - "100+ design types"
+        - "1M+ free photos & graphics"
+        - "5GB cloud storage"
+        - "Collaborate with others"
+      cta_text: "Start Free"
+    
+    - name: "Pro"
+      price: "$12.99"
+      period: "/mo"
+      featured: true
+      badge: "Most Popular"
+      features:
+        - "Everything in Free"
+        - "100M+ premium photos & videos"
+        - "610,000+ premium templates"
+        - "Background Remover"
+        - "Magic Resize"
+        - "Brand Kit"
+        - "100GB cloud storage"
+      cta_text: "Try Pro Free"
+    
+    - name: "Teams"
+      price: "$14.99"
+      period: "/user/mo"
+      features:
+        - "Everything in Pro"
+        - "Brand controls"
+        - "Workflow approval"
+        - "Assign tasks"
+        - "Team reports"
+        - "SSO (Enterprise)"
+      cta_text: "Get Teams"
+  
+  # Pros & Cons
+  pros_cons_intro: "Here's an honest assessment of Canva:"
+  
+  pros:
+    - "Extremely easy to use - no design experience needed"
+    - "Huge library of templates for every occasion"
+    - "Generous free plan with most features available"
+    - "Works on any device - desktop, tablet, mobile"
+    - "Real-time collaboration features"
+    - "Constant updates with new features and templates"
+    - "Print-on-demand integration"
+  
+  cons:
+    - "Limited advanced editing (no pen tool, layers are basic)"
+    - "Some premium elements mixed in with free (can be confusing)"
+    - "Export quality limited in free plan"
+    - "Can't import/edit PSD or AI files"
+    - "Requires internet connection"
+  
+  # Tips Section (HTML)
+  tips: |
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>🎯 Use Brand Kit</h3>
+            <p>Set up your brand colors, fonts, and logos once. Apply them to any design with one click.</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>⚡ Keyboard Shortcuts</h3>
+            <p>Press <strong>T</strong> for text, <strong>R</strong> for rectangle, <strong>L</strong> for line. Hold Shift while resizing to maintain proportions.</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>📱 Design for Multiple Sizes</h3>
+            <p>Use Magic Resize (Pro) to instantly convert one design to multiple sizes - great for social media.</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>🎨 Consistency is Key</h3>
+            <p>Stick to 2-3 fonts and a consistent color palette across all your designs for professional branding.</p>
+        </div>
+    </div>
+  
+  # FAQ Section
+  faq:
+    - question: "Is Canva really free?"
+      answer: "Yes! Canva offers a generous free plan with access to thousands of templates, photos, and design elements. While there are premium features in Canva Pro, most users find the free version more than sufficient for their needs."
+    
+    - question: "Can I use Canva designs commercially?"
+      answer: "Yes, you can use designs created in Canva for commercial purposes. However, free media from Canva cannot be trademarked. For full commercial rights, consider Canva Pro."
+    
+    - question: "Do I need design experience to use Canva?"
+      answer: "Absolutely not! Canva was built specifically for non-designers. The drag-and-drop interface and pre-made templates make it easy for anyone to create professional-looking designs."
+    
+    - question: "Can I collaborate with my team on Canva?"
+      answer: "Yes! Both free and paid plans support collaboration. You can share designs, leave comments, and work together in real-time."
+    
+    - question: "Is Canva better than Photoshop?"
+      answer: "They serve different purposes. Canva is perfect for quick, template-based designs without a learning curve. Photoshop offers more advanced editing capabilities but requires significant time to learn. For most marketing and social media needs, Canva is more than sufficient."
+  
+  # Related Tools
+  related_tools:
+    - icon: "🎨"
+      name: "Adobe Firefly"
+      description: "AI-powered image generation for creative projects"
+      url: "#"
+    
+    - icon: "🖼️"
+      name: "Midjourney"
+      description: "Advanced AI art generation tool"
+      url: "#"
+    
+    - icon: "📐"
+      name: "Figma"
+      description: "Collaborative interface design platform"
+      url: "#"

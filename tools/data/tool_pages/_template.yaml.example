@@ -1,0 +1,222 @@
+# ============================================================
+# TOOL PAGE TEMPLATE
+# ============================================================
+# Copy this file and rename to [tool-slug].yaml
+# Fill in the sections below to create a new tool page.
+# Run `python3 build.py` from the tools/ directory to generate.
+# ============================================================
+
+# ------------------------------------------------------------
+# TOOL METADATA (Required)
+# ------------------------------------------------------------
+tool:
+  # Basic Info
+  name: "Tool Name"                    # e.g., "ChatGPT", "Midjourney"
+  slug: "tool-slug"                    # URL-friendly name (e.g., "chatgpt")
+  category: "foundation"               # foundation, creative, writing, technical, business, research, voice, video, data, directory
+  emoji: "🤖"                          # Single emoji for the tool
+  short_title: "Brief Description"     # e.g., "AI Assistant" - used in page title
+  tagline: "Compelling tagline here"   # Hero section subtitle
+  
+  # SEO (Important for search rankings)
+  meta_description: "Learn [Tool Name] - Complete guide to [what it does]. Free tutorials, tips, and resources."
+  keywords: "tool name tutorial, tool name guide, learn tool name, tool name tips"
+  
+  # Hero Gradient (Optional - customize colors)
+  # gradient_start: "#3b82f6"          # Left color
+  # gradient_end: "#8b5cf6"            # Right color
+  
+  # Call-to-Action
+  cta_url: "https://tool-website.com/?utm_source=aitechmint"
+  cta_text: "Start Free Trial →"       # Button text
+  cta_subtitle: "Join X users today"   # Text below intro CTA
+  
+  # Final CTA Section
+  final_cta_text: "Get started free - no credit card required."
+  trust_points: "✓ Free Plan • ✓ No Credit Card • ✓ Cancel Anytime"
+  
+  # Paths (adjust based on page location)
+  css_path: "../../css/styles.css"     # Path to CSS from this page
+  home_path: "../../index.html"        # Path to homepage
+
+# ------------------------------------------------------------
+# PAGE CONTENT
+# ------------------------------------------------------------
+content:
+  # ----------------
+  # WHAT IS [TOOL]?
+  # ----------------
+  # Use HTML for formatting. This is the intro section.
+  what_is: |
+    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary);">
+        [Tool Name] is a [type of tool] that [main benefit]. 
+        [Additional context about what it does and why it matters.]
+    </p>
+    
+    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary);">
+        [History or background - when founded, by whom, popularity stats.]
+    </p>
+  
+  # Who is it for? (list of audiences)
+  who_is_for:
+    - title: "Audience 1"
+      description: "What they use it for"
+    - title: "Audience 2"
+      description: "What they use it for"
+    - title: "Audience 3"
+      description: "What they use it for"
+  
+  # YouTube video ID (optional - just the ID, not full URL)
+  # overview_video_id: "dQw4w9WgXcQ"
+  
+  # ----------------
+  # KEY FEATURES
+  # ----------------
+  features_intro: "Here are the features that make [Tool Name] stand out:"
+  
+  features:
+    - icon: "📐"
+      title: "Feature 1"
+      description: "What this feature does and why it matters."
+      pro_tip: "Advanced tip for using this feature."
+    
+    - icon: "🎨"
+      title: "Feature 2"
+      description: "What this feature does and why it matters."
+      # pro_tip is optional
+    
+    - icon: "⚡"
+      title: "Feature 3"
+      description: "What this feature does and why it matters."
+  
+  # ----------------
+  # GETTING STARTED
+  # ----------------
+  # Use HTML. Step-by-step guide.
+  getting_started: |
+    <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 30px;">
+        Getting started with [Tool Name] is simple. Follow these steps:
+    </p>
+    
+    <h3>Step 1: Create Account</h3>
+    <p style="color: var(--text-secondary); line-height: 1.8;">
+        Visit <a href="https://tool.com" target="_blank" style="color: var(--primary-color);">tool.com</a> and sign up.
+    </p>
+    
+    <h3>Step 2: [Next Step]</h3>
+    <p style="color: var(--text-secondary); line-height: 1.8;">
+        Description of step 2.
+    </p>
+    
+    <h3>Step 3: [Next Step]</h3>
+    <p style="color: var(--text-secondary); line-height: 1.8;">
+        Description of step 3.
+    </p>
+  
+  # ----------------
+  # PRICING
+  # ----------------
+  pricing_summary: "[Tool Name] offers [brief pricing overview]."
+  
+  pricing:
+    - name: "Free"
+      price: "$0"
+      period: "/month"
+      features:
+        - "Feature 1"
+        - "Feature 2"
+        - "Feature 3"
+      cta_text: "Start Free"
+    
+    - name: "Pro"
+      price: "$X"
+      period: "/month"
+      featured: true              # Highlights this plan
+      badge: "Most Popular"       # Badge text (optional)
+      features:
+        - "Everything in Free"
+        - "Pro Feature 1"
+        - "Pro Feature 2"
+      cta_text: "Try Pro Free"
+    
+    - name: "Enterprise"
+      price: "$XX"
+      period: "/month"
+      features:
+        - "Everything in Pro"
+        - "Enterprise Feature 1"
+        - "Enterprise Feature 2"
+      cta_text: "Contact Sales"
+  
+  # ----------------
+  # PROS & CONS
+  # ----------------
+  pros_cons_intro: "Here's an honest assessment of [Tool Name]:"
+  
+  pros:
+    - "Pro 1 - why this is good"
+    - "Pro 2 - why this is good"
+    - "Pro 3 - why this is good"
+    - "Pro 4 - why this is good"
+  
+  cons:
+    - "Con 1 - limitation or drawback"
+    - "Con 2 - limitation or drawback"
+    - "Con 3 - limitation or drawback"
+  
+  # ----------------
+  # TIPS (Optional)
+  # ----------------
+  # Use HTML. Tips and best practices.
+  tips: |
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>🎯 Tip 1</h3>
+            <p>Description of tip 1.</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>⚡ Tip 2</h3>
+            <p>Description of tip 2.</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>💡 Tip 3</h3>
+            <p>Description of tip 3.</p>
+        </div>
+    </div>
+  
+  # ----------------
+  # FAQ
+  # ----------------
+  faq:
+    - question: "Is [Tool Name] free?"
+      answer: "Answer about pricing and free tier."
+    
+    - question: "Do I need experience to use [Tool Name]?"
+      answer: "Answer about learning curve."
+    
+    - question: "Can I use [Tool Name] for commercial projects?"
+      answer: "Answer about licensing and commercial use."
+    
+    - question: "How does [Tool Name] compare to [Competitor]?"
+      answer: "Honest comparison with main competitor."
+  
+  # ----------------
+  # RELATED TOOLS
+  # ----------------
+  related_tools:
+    - icon: "🔧"
+      name: "Related Tool 1"
+      description: "Brief description"
+      url: "#"
+    
+    - icon: "🎨"
+      name: "Related Tool 2"
+      description: "Brief description"
+      url: "#"
+    
+    - icon: "📊"
+      name: "Related Tool 3"
+      description: "Brief description"
+      url: "#"

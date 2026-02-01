@@ -1,0 +1,1804 @@
+# AI Tools Database - Complete Catalog
+# Extracted from original index.html
+
+# ============================================================
+# FOUNDATION TOOLS (12 tools)
+# ============================================================
+foundation_tools:
+  - name: "ChatGPT"
+    slug: "chatgpt"
+    category: "foundation"
+    icon: "images/tools/whisper-ai.png"
+    emoji: "🤖"
+    gradient: "linear-gradient(135deg, #10b981, #3b82f6)"
+    description: "Learn conversational AI, prompt engineering, and content creation. Master writing, research, and problem-solving with the world's most popular AI assistant."
+    level: "Beginner"
+    level_color: "#10b981"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+    badges: ["Popular", "Free"]
+    featured: true
+
+  - name: "Claude AI"
+    slug: "claude"
+    category: "foundation"
+    icon: "images/tools/claude.png"
+    emoji: "🧠"
+    gradient: "linear-gradient(135deg, #10b981, #3b82f6)"
+    description: "Advanced AI for complex analysis and long documents. Learn to handle 200K+ token contexts, deep research, and nuanced conversations with ethical AI."
+    level: "Intermediate"
+    level_color: "#10b981"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+    badges: ["Popular", "Free"]
+    featured: true
+
+  - name: "Gemini"
+    slug: "gemini"
+    category: "foundation"
+    icon: "images/tools/gemini-deep-research.svg"
+    emoji: "✨"
+    gradient: "linear-gradient(135deg, #10b981, #3b82f6)"
+    description: "Google's powerful multimodal AI. Learn to combine text, images, and data analysis. Perfect for research, coding, and complex problem-solving."
+    level: "Beginner"
+    level_color: "#10b981"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+    badges: ["Popular", "Free"]
+
+  - name: "Prompt Engineering"
+    slug: "prompt-engineering"
+    category: "foundation"
+    icon: "images/tools/prompt-engineering.svg"
+    emoji: "💡"
+    gradient: "linear-gradient(135deg, #10b981, #3b82f6)"
+    description: "Essential skill for all AI tools. Learn to write effective prompts, get better results, and unlock the full potential of any AI assistant."
+    level: "Beginner"
+    level_color: "#10b981"
+    status: "Learn Now →"
+    available: true
+    page_url: "pages/prompt-engineering.html"
+    badges: ["Free"]
+
+  - name: "Perplexity AI"
+    slug: "perplexity"
+    category: "foundation"
+    icon: "images/tools/perplexity.svg"
+    emoji: "🔍"
+    gradient: "linear-gradient(135deg, #10b981, #3b82f6)"
+    description: "AI-powered search with citations"
+    level: "Beginner"
+    level_color: "#10b981"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+    badges: ["Popular", "Free"]
+
+  - name: "Microsoft Copilot"
+    slug: "microsoft-copilot"
+    category: "foundation"
+    icon: "images/tools/microsoft-copilot.ico"
+    emoji: "💬"
+    gradient: "linear-gradient(135deg, #10b981, #3b82f6)"
+    description: "Microsoft 365 AI assistant"
+    level: "Beginner"
+    level_color: "#10b981"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Meta AI (Llama)"
+    slug: "meta-ai"
+    category: "foundation"
+    icon: "images/tools/meta-ai.svg"
+    emoji: "🦙"
+    gradient: "linear-gradient(135deg, #10b981, #3b82f6)"
+    description: "Open-source AI models"
+    level: "Intermediate"
+    level_color: "#10b981"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Poe"
+    slug: "poe"
+    category: "foundation"
+    icon: "images/tools/poe.svg"
+    emoji: "🎭"
+    gradient: "linear-gradient(135deg, #10b981, #3b82f6)"
+    description: "Multi-model AI platform"
+    level: "Beginner"
+    level_color: "#10b981"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Grok"
+    slug: "grok"
+    category: "foundation"
+    icon: "images/tools/grok.ico"
+    emoji: "⚡"
+    gradient: "linear-gradient(135deg, #10b981, #3b82f6)"
+    description: "X/Twitter's AI with real-time web access. Leverage current events, trending topics, and conversational AI with personality."
+    level: "Beginner"
+    level_color: "#10b981"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+    badges: ["New"]
+
+  - name: "Mistral AI"
+    slug: "mistral-ai"
+    category: "foundation"
+    icon: "images/tools/mistral-ai.ico"
+    emoji: "🌟"
+    gradient: "linear-gradient(135deg, #10b981, #3b82f6)"
+    description: "Open-source European AI powerhouse. Efficient, privacy-focused AI with strong reasoning capabilities and multilingual support."
+    level: "Intermediate"
+    level_color: "#10b981"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "ChatGPT Search"
+    slug: "chatgpt-search"
+    category: "foundation"
+    icon: "images/tools/whisper-ai.png"
+    emoji: "🔍"
+    gradient: "linear-gradient(135deg, #10b981, #3b82f6)"
+    description: "Real-time web search integrated into ChatGPT. Find and synthesize current information with AI-powered research capabilities."
+    level: "Beginner"
+    level_color: "#10b981"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "ChatGPT Deep Research"
+    slug: "chatgpt-deep-research"
+    category: "foundation"
+    icon: "images/tools/whisper-ai.png"
+    emoji: "🎓"
+    gradient: "linear-gradient(135deg, #10b981, #3b82f6)"
+    description: "Autonomous research agent that explores topics deeply. Conduct comprehensive research with multi-source analysis and synthesis."
+    level: "Intermediate"
+    level_color: "#10b981"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+# ============================================================
+# CREATIVE TOOLS (16 tools)
+# ============================================================
+creative_tools:
+  - name: "Canva"
+    slug: "canva"
+    category: "creative"
+    icon: "images/tools/canva.ico"
+    emoji: "🎨"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "Create stunning visuals with AI. Learn to design social media posts, presentations, and marketing materials without design skills."
+    level: "Beginner"
+    level_color: "#8b5cf6"
+    status: "Learn Now →"
+    available: true
+    page_url: "pages/creative/canva.html"
+    badges: ["Popular", "Free"]
+    featured: true
+
+  - name: "Midjourney"
+    slug: "midjourney"
+    category: "creative"
+    icon: "images/tools/midjourney.png"
+    emoji: "🎭"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "Artistic AI image generation"
+    level: "Intermediate"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+    badges: ["Popular"]
+    featured: true
+
+  - name: "DALL-E 3"
+    slug: "dall-e-3"
+    category: "creative"
+    icon: "images/tools/dall-e-3-branded.svg"
+    emoji: "🖼️"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "Create realistic images from text descriptions. Learn to generate custom visuals, edit photos, and bring your creative ideas to life."
+    level: "Intermediate"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+    badges: ["Popular"]
+
+  - name: "Leonardo.AI"
+    slug: "leonardo-ai"
+    category: "creative"
+    icon: "images/tools/leonardoai.ico"
+    emoji: "🎨"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "Generate game assets and consistent character designs. Perfect for game developers, artists, and content creators needing style consistency."
+    level: "Intermediate"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "RunwayML"
+    slug: "runwayml"
+    category: "creative"
+    icon: "images/tools/runwayml.svg"
+    emoji: "🎬"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "Create and edit videos with AI. Learn advanced video manipulation, effects, and generation for professional content creation."
+    level: "Intermediate"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Stable Diffusion"
+    slug: "stable-diffusion"
+    category: "creative"
+    icon: "images/tools/stable-diffusion.ico"
+    emoji: "🖼️"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "Master open-source AI art with full control. Run locally, customize models, and create unique images without restrictions or costs."
+    level: "Intermediate"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Adobe Firefly"
+    slug: "adobe-firefly"
+    category: "creative"
+    icon: "images/tools/adobe-firefly.ico"
+    emoji: "✨"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "Generate commercial-safe images with Adobe's AI. Perfect for businesses needing copyright-clear visuals and professional designs."
+    level: "Beginner"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Pika Labs"
+    slug: "pika-labs"
+    category: "creative"
+    icon: "images/tools/pika-labs.ico"
+    emoji: "🎥"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "Turn text into engaging videos instantly. Learn to create short-form content, animations, and video clips from simple descriptions."
+    level: "Intermediate"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Ideogram"
+    slug: "ideogram"
+    category: "creative"
+    icon: "images/tools/ideogram.svg"
+    emoji: "🔤"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "Generate stunning images with text rendered perfectly. Create logos, posters, and graphics with AI that understands typography and layout."
+    level: "Beginner"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Clipdrop"
+    slug: "clipdrop"
+    category: "creative"
+    icon: "images/tools/clipdrop.ico"
+    emoji: "✂️"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "Powerful AI image editing suite. Remove backgrounds, upscale images, and perform advanced edits with one-click AI tools."
+    level: "Beginner"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Nano Banana"
+    slug: "nano-banana"
+    category: "creative"
+    icon: "images/tools/nanobanana.svg"
+    emoji: "🍌"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "AI image generation with style control. Create unique visuals with fine-tuned artistic styles and consistent character generation."
+    level: "Intermediate"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Looka"
+    slug: "looka"
+    category: "creative"
+    icon: "images/tools/looka.ico"
+    emoji: "🎯"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "AI-powered logo and brand identity designer. Create professional logos, business cards, and brand kits in minutes with intelligent design assistance."
+    level: "Beginner"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Kittl"
+    slug: "kittl"
+    category: "creative"
+    icon: "images/tools/kittl.ico"
+    emoji: "🎨"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "AI-powered design platform for creators. Generate stunning graphics, typography, and illustrations with easy-to-use templates and AI features."
+    level: "Beginner"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Stockimg.ai"
+    slug: "stockimg-ai"
+    category: "creative"
+    icon: "images/tools/stockimgai.ico"
+    emoji: "📸"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "Generate custom stock images, posters, and book covers with AI. Perfect for commercial projects requiring unique, copyright-free visuals."
+    level: "Beginner"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "StarryAI"
+    slug: "starryai"
+    category: "creative"
+    icon: "images/tools/starryai.svg"
+    emoji: "⭐"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "Mobile-friendly AI art generator with diverse styles. Create artistic images from text with multiple model options and style presets."
+    level: "Beginner"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Gamma"
+    slug: "gamma"
+    category: "creative"
+    icon: "images/tools/gamma.svg"
+    emoji: "🎯"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "Create presentations, documents, and webpages with AI. No design skills needed - Gamma generates beautiful, engaging content in seconds."
+    level: "Beginner"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+# ============================================================
+# WRITING TOOLS (13 tools)
+# ============================================================
+writing_tools:
+  - name: "Jasper"
+    slug: "jasper"
+    category: "writing"
+    icon: "images/tools/jasper.svg"
+    emoji: "✍️"
+    gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)"
+    description: "Master AI-powered marketing copy. Learn to write compelling ads, emails, blog posts, and sales content that converts."
+    level: "Beginner"
+    level_color: "#3b82f6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Copy.ai"
+    slug: "copy-ai"
+    category: "writing"
+    icon: "images/tools/copyai.svg"
+    emoji: "📝"
+    gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)"
+    description: "Generate marketing content at scale. Create social posts, product descriptions, and ad copy in minutes, not hours."
+    level: "Beginner"
+    level_color: "#3b82f6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Grammarly"
+    slug: "grammarly"
+    category: "writing"
+    icon: "images/tools/grammarly.svg"
+    emoji: "✔️"
+    gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)"
+    description: "Perfect your writing with AI. Learn to catch errors, improve clarity, adjust tone, and write professionally in any context."
+    level: "Beginner"
+    level_color: "#3b82f6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Writesonic"
+    slug: "writesonic"
+    category: "writing"
+    icon: "images/tools/writesonic.svg"
+    emoji: "🚀"
+    gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)"
+    description: "AI content generator"
+    level: "Beginner"
+    level_color: "#3b82f6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Rytr"
+    slug: "rytr"
+    category: "writing"
+    icon: "images/tools/rytr.svg"
+    emoji: "💬"
+    gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)"
+    description: "Budget-friendly AI writing"
+    level: "Beginner"
+    level_color: "#3b82f6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "QuillBot"
+    slug: "quillbot"
+    category: "writing"
+    icon: "images/tools/quillbot.ico"
+    emoji: "🪶"
+    gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)"
+    description: "Rewrite and summarize content with AI. Perfect for research, avoiding plagiarism, and understanding complex texts quickly."
+    level: "Beginner"
+    level_color: "#3b82f6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Wordtune"
+    slug: "wordtune"
+    category: "writing"
+    icon: "images/tools/wordtune.svg"
+    emoji: "🎯"
+    gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)"
+    description: "Sentence rewriting"
+    level: "Beginner"
+    level_color: "#3b82f6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Notion AI"
+    slug: "notion-ai"
+    category: "writing"
+    icon: "images/tools/notion-ai.svg"
+    emoji: "📄"
+    gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)"
+    description: "AI writing inside Notion. Learn to generate, edit, and organize content directly in your workspace for seamless productivity."
+    level: "Beginner"
+    level_color: "#3b82f6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+    badges: ["Popular"]
+
+  - name: "Koalawriter"
+    slug: "koalawriter"
+    category: "writing"
+    icon: "images/tools/koalawriter.svg"
+    emoji: "🐨"
+    gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)"
+    description: "AI-powered SEO content writer. Generate optimized blog posts and articles with keyword integration and search engine best practices."
+    level: "Beginner"
+    level_color: "#3b82f6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Copysmith"
+    slug: "copysmith"
+    category: "writing"
+    icon: "images/tools/copysmith.svg"
+    emoji: "✍️"
+    gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)"
+    description: "Enterprise marketing copy generator. Create product descriptions, ad copy, and marketing content at scale with brand voice consistency."
+    level: "Intermediate"
+    level_color: "#3b82f6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Sudowrite"
+    slug: "sudowrite"
+    category: "writing"
+    icon: "images/tools/sudowrite.svg"
+    emoji: "📚"
+    gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)"
+    description: "AI writing tool for fiction authors. Overcome writer's block, develop characters, and craft compelling narratives with creative AI assistance."
+    level: "Intermediate"
+    level_color: "#3b82f6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Shortly AI"
+    slug: "shortly-ai"
+    category: "writing"
+    icon: "images/tools/shortly-ai.svg"
+    emoji: "⚡"
+    gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)"
+    description: "AI writing partner for long-form content. Create articles, stories, and reports with AI that understands context and maintains flow."
+    level: "Beginner"
+    level_color: "#3b82f6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Compose AI"
+    slug: "compose-ai"
+    category: "writing"
+    icon: "images/tools/compose-ai.svg"
+    emoji: "✨"
+    gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)"
+    description: "Chrome extension for AI-powered writing. Autocomplete sentences, rephrase text, and write emails faster across any website."
+    level: "Beginner"
+    level_color: "#3b82f6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+# ============================================================
+# TECHNICAL TOOLS (12 tools)
+# ============================================================
+technical_tools:
+  - name: "GitHub Copilot"
+    slug: "github-copilot"
+    category: "technical"
+    icon: "images/tools/github-copilot.ico"
+    emoji: "👨‍💻"
+    gradient: "linear-gradient(135deg, #ef4444, #f59e0b)"
+    description: "Code faster with AI assistance. Learn to write functions, debug code, and get intelligent suggestions as you type."
+    level: "Intermediate"
+    level_color: "#ef4444"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+    badges: ["Popular"]
+    featured: true
+
+  - name: "Replit Ghostwriter"
+    slug: "replit-ghostwriter"
+    category: "technical"
+    icon: "images/tools/replit-ghostwriter.svg"
+    emoji: "☁️"
+    gradient: "linear-gradient(135deg, #ef4444, #f59e0b)"
+    description: "Cloud IDE AI assistant"
+    level: "Intermediate"
+    level_color: "#ef4444"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Cursor"
+    slug: "cursor"
+    category: "technical"
+    icon: "images/tools/cursor.ico"
+    emoji: "⚡"
+    gradient: "linear-gradient(135deg, #ef4444, #f59e0b)"
+    description: "Next-gen AI code editor. Learn to code with conversational AI, auto-completion, and codebase understanding for rapid development."
+    level: "Advanced"
+    level_color: "#ef4444"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Codeium"
+    slug: "codeium"
+    category: "technical"
+    icon: "images/tools/codeium.ico"
+    emoji: "🆓"
+    gradient: "linear-gradient(135deg, #ef4444, #f59e0b)"
+    description: "Free AI code completion for all languages. Boost coding speed and learn best practices with intelligent, context-aware suggestions."
+    level: "Intermediate"
+    level_color: "#ef4444"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Tabnine"
+    slug: "tabnine"
+    category: "technical"
+    icon: "images/tools/tabnine.ico"
+    emoji: "🏢"
+    gradient: "linear-gradient(135deg, #ef4444, #f59e0b)"
+    description: "Enterprise code completion"
+    level: "Intermediate"
+    level_color: "#ef4444"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Amazon CodeWhisperer"
+    slug: "amazon-codewhisperer"
+    category: "technical"
+    icon: "images/tools/amazon-codewhisperer.svg"
+    emoji: "🔶"
+    gradient: "linear-gradient(135deg, #FF9900, #232F3E)"
+    description: "AWS-optimized coding AI"
+    level: "Intermediate"
+    level_color: "#ef4444"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Sourcegraph Cody"
+    slug: "sourcegraph-cody"
+    category: "technical"
+    icon: "images/tools/sourcegraph-cody.ico"
+    emoji: "🔍"
+    gradient: "linear-gradient(135deg, #ef4444, #f59e0b)"
+    description: "Code intelligence"
+    level: "Intermediate"
+    level_color: "#ef4444"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Phind"
+    slug: "phind"
+    category: "technical"
+    icon: "images/tools/phind.ico"
+    emoji: "🔎"
+    gradient: "linear-gradient(135deg, #ef4444, #f59e0b)"
+    description: "Developer search engine"
+    level: "Beginner"
+    level_color: "#ef4444"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "v0 by Vercel"
+    slug: "v0-vercel"
+    category: "technical"
+    icon: "images/tools/v0-by-vercel.svg"
+    emoji: "🎨"
+    gradient: "linear-gradient(135deg, #ef4444, #f59e0b)"
+    description: "AI UI generation"
+    level: "Intermediate"
+    level_color: "#ef4444"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Bolt.new"
+    slug: "bolt-new"
+    category: "technical"
+    icon: "images/tools/boltnew.ico"
+    emoji: "⚡"
+    gradient: "linear-gradient(135deg, #ef4444, #f59e0b)"
+    description: "Full-stack AI development"
+    level: "Advanced"
+    level_color: "#ef4444"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Askcodi"
+    slug: "askcodi"
+    category: "technical"
+    icon: "images/tools/askcodi.ico"
+    emoji: "💬"
+    gradient: "linear-gradient(135deg, #ef4444, #f59e0b)"
+    description: "AI coding assistant for developers. Get instant code explanations, debugging help, and optimization suggestions across multiple programming languages."
+    level: "Intermediate"
+    level_color: "#ef4444"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Whisper AI"
+    slug: "whisper-ai"
+    category: "technical"
+    icon: "images/tools/whisper-ai.png"
+    emoji: "🎤"
+    gradient: "linear-gradient(135deg, #ef4444, #f59e0b)"
+    description: "OpenAI's powerful speech recognition API. Build applications with accurate transcription, translation, and voice-to-text capabilities."
+    level: "Advanced"
+    level_color: "#ef4444"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+# ============================================================
+# VOICE & AUDIO TOOLS (12 tools)
+# ============================================================
+voice_tools:
+  - name: "ElevenLabs"
+    slug: "elevenlabs"
+    category: "voice"
+    icon: "images/tools/elevenlabs.ico"
+    emoji: "🎙️"
+    gradient: "linear-gradient(135deg, #ec4899, #8b5cf6)"
+    description: "Realistic AI voice generation"
+    level: "Intermediate"
+    level_color: "#ec4899"
+    status: "Learn Now →"
+    available: true
+    page_url: "day08_elevenlabs.md"
+
+  - name: "Otter.ai"
+    slug: "otter-ai"
+    category: "voice"
+    icon: "images/tools/otterai.ico"
+    emoji: "🎙️"
+    gradient: "linear-gradient(135deg, #ec4899, #8b5cf6)"
+    description: "AI meeting transcription"
+    level: "Beginner"
+    level_color: "#ec4899"
+    status: "Learn Now →"
+    available: true
+    page_url: "day16_otter.md"
+
+  - name: "Fireflies.ai"
+    slug: "fireflies-ai"
+    category: "voice"
+    icon: "images/tools/fireflies.ico"
+    emoji: "🎙️"
+    gradient: "linear-gradient(135deg, #ec4899, #8b5cf6)"
+    description: "Record & transcribe meetings"
+    level: "Beginner"
+    level_color: "#ec4899"
+    status: "Learn Now →"
+    available: true
+    page_url: "day20_fireflies.md"
+
+  - name: "Murf.ai"
+    slug: "murf-ai"
+    category: "voice"
+    icon: "images/tools/murf-ai.svg"
+    emoji: "🎤"
+    gradient: "linear-gradient(135deg, #ec4899, #8b5cf6)"
+    description: "AI voiceover generation platform"
+    level: "Beginner"
+    level_color: "#ec4899"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Resemble AI"
+    slug: "resemble-ai"
+    category: "voice"
+    icon: "images/tools/resemble-ai.svg"
+    emoji: "🔊"
+    gradient: "linear-gradient(135deg, #ec4899, #8b5cf6)"
+    description: "Custom AI voice cloning"
+    level: "Advanced"
+    level_color: "#ec4899"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Speechify"
+    slug: "speechify"
+    category: "voice"
+    icon: "images/tools/speechify.svg"
+    emoji: "🎧"
+    gradient: "linear-gradient(135deg, #ec4899, #8b5cf6)"
+    description: "Text-to-speech for accessibility"
+    level: "Beginner"
+    level_color: "#ec4899"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Play.ht"
+    slug: "play-ht"
+    category: "voice"
+    icon: "images/tools/play-ht.svg"
+    emoji: "🗣️"
+    gradient: "linear-gradient(135deg, #ec4899, #8b5cf6)"
+    description: "AI voice generator for content. Create ultra-realistic voiceovers with emotion, perfect for videos, podcasts, and audiobooks."
+    level: "Beginner"
+    level_color: "#ec4899"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Krisp"
+    slug: "krisp"
+    category: "voice"
+    icon: "images/tools/krisp.svg"
+    emoji: "🔇"
+    gradient: "linear-gradient(135deg, #ec4899, #8b5cf6)"
+    description: "AI-powered noise cancellation for crystal-clear calls. Remove background noise, echo, and voices in real-time for professional audio quality."
+    level: "Beginner"
+    level_color: "#ec4899"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "tl;dv"
+    slug: "tldv"
+    category: "voice"
+    icon: "images/tools/tl-dv.ico"
+    emoji: "📹"
+    gradient: "linear-gradient(135deg, #ec4899, #8b5cf6)"
+    description: "AI meeting recorder for Google Meet and Zoom. Automatically transcribe, summarize, and highlight key moments from your meetings."
+    level: "Beginner"
+    level_color: "#ec4899"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Granola"
+    slug: "granola"
+    category: "voice"
+    icon: "images/tools/granola.ico"
+    emoji: "📝"
+    gradient: "linear-gradient(135deg, #ec4899, #8b5cf6)"
+    description: "AI notepad that enhances your meeting notes. Automatically improve and structure your notes with AI-powered formatting and insights."
+    level: "Beginner"
+    level_color: "#ec4899"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Tactiq"
+    slug: "tactiq"
+    category: "voice"
+    icon: "images/tools/tactiq.svg"
+    emoji: "✍️"
+    gradient: "linear-gradient(135deg, #ec4899, #8b5cf6)"
+    description: "Real-time transcription for Google Meet, Zoom, and Teams. Get live transcripts and AI-generated summaries during your meetings."
+    level: "Beginner"
+    level_color: "#ec4899"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Yoodli"
+    slug: "yoodli"
+    category: "voice"
+    icon: "images/tools/yoodli.ico"
+    emoji: "🎤"
+    gradient: "linear-gradient(135deg, #ec4899, #8b5cf6)"
+    description: "AI speech coaching for better communication. Get instant feedback on your speaking skills, pace, filler words, and confidence."
+    level: "Intermediate"
+    level_color: "#ec4899"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+# ============================================================
+# VIDEO TOOLS (14 tools)
+# ============================================================
+video_tools:
+  - name: "Synthesia"
+    slug: "synthesia"
+    category: "video"
+    icon: "images/tools/synthesia.svg"
+    emoji: "🎥"
+    gradient: "linear-gradient(135deg, #14b8a6, #06b6d4)"
+    description: "AI video with digital avatars"
+    level: "Intermediate"
+    level_color: "#14b8a6"
+    status: "Learn Now →"
+    available: true
+    page_url: "day14_synthesia.md"
+
+  - name: "Runway"
+    slug: "runway"
+    category: "video"
+    icon: "images/tools/runway.svg"
+    emoji: "🎬"
+    gradient: "linear-gradient(135deg, #14b8a6, #06b6d4)"
+    description: "AI video editing & generation"
+    level: "Advanced"
+    level_color: "#14b8a6"
+    status: "Learn Now →"
+    available: true
+    page_url: "day11_runway.md"
+
+  - name: "Pictory"
+    slug: "pictory"
+    category: "video"
+    icon: "images/tools/pictory.svg"
+    emoji: "🎥"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "Text-to-video for marketing"
+    level: "Beginner"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Kapwing"
+    slug: "kapwing"
+    category: "video"
+    icon: "images/tools/kapwing.svg"
+    emoji: "🎞️"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "Collaborative video editing platform. Create, edit, and share videos online with AI-powered tools and team collaboration features."
+    level: "Beginner"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "D-ID"
+    slug: "d-id"
+    category: "video"
+    icon: "images/tools/d-id.svg"
+    emoji: "🎭"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "Create AI-powered talking avatar videos. Transform photos into speaking presenters with natural lip-sync and expressions."
+    level: "Intermediate"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Google Veo"
+    slug: "google-veo"
+    category: "video"
+    icon: "images/tools/google-veo.svg"
+    emoji: "🎬"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "Google's advanced video generation AI. Create high-quality videos from text prompts with cinematic effects and natural motion."
+    level: "Advanced"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Magic Hour AI"
+    slug: "magic-hour-ai"
+    category: "video"
+    icon: "images/tools/magic-hour.svg"
+    emoji: "✨"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "All-in-one AI video creation suite. Generate, edit, and enhance videos with multiple AI tools for professional content creation."
+    level: "Intermediate"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "OpusClip"
+    slug: "opusclip"
+    category: "video"
+    icon: "images/tools/opusclip.svg"
+    emoji: "✂️"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "Turn long-form videos into viral short-form clips. AI automatically identifies highlights and creates engaging social media content."
+    level: "Beginner"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Lumen5"
+    slug: "lumen5"
+    category: "video"
+    icon: "images/tools/lumen5.svg"
+    emoji: "🎥"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "AI-powered video creation for marketing. Transform blog posts and articles into engaging video content automatically."
+    level: "Beginner"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "HeyGen"
+    slug: "heygen"
+    category: "video"
+    icon: "images/tools/heygen.ico"
+    emoji: "👤"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "Create studio-quality videos with AI avatars. Generate professional talking head videos in minutes with customizable avatars and voices."
+    level: "Beginner"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Invideo AI"
+    slug: "invideo-ai"
+    category: "video"
+    icon: "images/tools/invideo.ico"
+    emoji: "🎬"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "AI video creation from text prompts. Generate complete videos with stock footage, voiceovers, and music from simple text descriptions."
+    level: "Beginner"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Descript"
+    slug: "descript"
+    category: "video"
+    icon: "images/tools/descript.svg"
+    emoji: "🎙️"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "Edit video by editing text transcripts. Revolutionary audio and video editing with AI-powered transcription, overdub, and studio sound."
+    level: "Intermediate"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "VideoExpress.ai"
+    slug: "videoexpress-ai"
+    category: "video"
+    icon: "images/tools/videoexpress.svg"
+    emoji: "🎬"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "Turn any idea into viral videos instantly. Add AI narration, subtitles, and visuals automatically. Perfect for YouTube Shorts, TikTok & Reels."
+    level: "Beginner"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "TalkingPhotos.ai"
+    slug: "talkingphotos-ai"
+    category: "video"
+    icon: "images/tools/talkingphotos.svg"
+    emoji: "📸"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "Turn photos into talking, singing, and dancing videos in minutes. Bring static images to life with AI-powered animation and realistic expressions."
+    level: "Beginner"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+# ============================================================
+# BUSINESS TOOLS (21 tools)
+# ============================================================
+business_tools:
+  - name: "Zapier"
+    slug: "zapier"
+    category: "business"
+    icon: "images/tools/zapier.png"
+    emoji: "⚡"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "Automate workflows with AI"
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Learn Now →"
+    available: true
+    page_url: "day18_zapier.md"
+
+  - name: "Beautiful.ai"
+    slug: "beautiful-ai"
+    category: "business"
+    icon: "images/tools/beautifulai.ico"
+    emoji: "📊"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "AI-powered presentations"
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Learn Now →"
+    available: true
+    page_url: "day19_beautiful.md"
+
+  - name: "Tome"
+    slug: "tome"
+    category: "business"
+    icon: "images/tools/tome.svg"
+    emoji: "📖"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "AI storytelling & presentations"
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Learn Now →"
+    available: true
+    page_url: "day21_tome.md"
+
+  - name: "Make"
+    slug: "make"
+    category: "business"
+    icon: "images/tools/make.svg"
+    emoji: "⚡"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "Visual workflow automation"
+    level: "Intermediate"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Bizway"
+    slug: "bizway"
+    category: "business"
+    icon: "images/tools/bizway.svg"
+    emoji: "📈"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "AI business assistant"
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Tidio"
+    slug: "tidio"
+    category: "business"
+    icon: "images/tools/tidio.svg"
+    emoji: "🤝"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "AI customer service chatbot"
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Mailmeteor"
+    slug: "mailmeteor"
+    category: "business"
+    icon: "images/tools/mailmeteor.svg"
+    emoji: "📧"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "AI-powered email personalization and mail merge. Automate outreach campaigns with intelligent personalization at scale."
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "n8n"
+    slug: "n8n"
+    category: "business"
+    icon: "images/tools/n8n.ico"
+    emoji: "⚡"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "Open-source workflow automation platform. Connect apps, automate tasks, and build complex workflows with visual no-code tools."
+    level: "Intermediate"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "CrystalKnows"
+    slug: "crystalknows"
+    category: "business"
+    icon: "images/tools/crystalknows.svg"
+    emoji: "💎"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "AI-powered personality insights for better communication. Optimize professional and sales interactions with data-driven recommendations."
+    level: "Intermediate"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Hostinger AI Builder"
+    slug: "hostinger-ai-builder"
+    category: "business"
+    icon: "images/tools/hostinger-ai-builder.ico"
+    emoji: "🌐"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "Create professional websites from a single sentence. AI-powered website builder with automatic SEO optimization and responsive design."
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Monday.com"
+    slug: "monday-com"
+    category: "business"
+    icon: "images/tools/mondaycom.ico"
+    emoji: "📋"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "AI-powered work operating system. Manage projects, automate workflows, and boost team collaboration with intelligent automation."
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "ClickUp"
+    slug: "clickup"
+    category: "business"
+    icon: "images/tools/clickup.ico"
+    emoji: "⚡"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "All-in-one productivity platform with AI. Manage tasks, docs, goals, and chat in one place with AI-powered writing and automation."
+    level: "Intermediate"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Asana"
+    slug: "asana"
+    category: "business"
+    icon: "images/tools/asana.ico"
+    emoji: "✅"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "Smart project management with AI intelligence. Organize work, track progress, and automate routine tasks with AI-powered workflows."
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Trello"
+    slug: "trello"
+    category: "business"
+    icon: "images/tools/trello.ico"
+    emoji: "📌"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "Visual Kanban boards with AI automation. Organize projects intuitively with cards, lists, and AI-powered Butler automation."
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Taskade"
+    slug: "taskade"
+    category: "business"
+    icon: "images/tools/taskade.ico"
+    emoji: "🤝"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "AI-powered team collaboration workspace. Create tasks, mind maps, and workflows with built-in AI assistant for instant productivity."
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "BeforeSunset AI"
+    slug: "beforesunset-ai"
+    category: "business"
+    icon: "images/tools/beforesunset-ai.svg"
+    emoji: "🌅"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "AI daily planner that creates your perfect schedule. Turn tasks into time-blocked plans automatically for maximum productivity."
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Motion"
+    slug: "motion"
+    category: "business"
+    icon: "images/tools/motion.ico"
+    emoji: "📅"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "AI calendar that plans your day automatically. Intelligently schedule tasks, meetings, and breaks for optimal time management."
+    level: "Intermediate"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Superhuman"
+    slug: "superhuman"
+    category: "business"
+    icon: "images/tools/superhuman.svg"
+    emoji: "⚡"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "The fastest email experience with AI-powered features. Reach inbox zero with AI triage, instant replies, and blazing-fast shortcuts."
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Gemini in Gmail"
+    slug: "gemini-gmail"
+    category: "business"
+    icon: "images/tools/gemini-deep-research.svg"
+    emoji: "✉️"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "Google's AI assistant integrated directly in Gmail. Write emails, summarize threads, and automate responses with natural language."
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Rows"
+    slug: "rows"
+    category: "business"
+    icon: "images/tools/rows.svg"
+    emoji: "📊"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "Spreadsheet with AI superpowers. Connect to any data source, use AI formulas, and automate workflows with intelligent spreadsheets."
+    level: "Intermediate"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Decktopus"
+    slug: "decktopus"
+    category: "business"
+    icon: "images/tools/decktopus.svg"
+    emoji: "🎨"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "AI presentation maker that creates slides from prompts. Generate professional presentations in minutes with AI-powered design and content."
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+# ============================================================
+# RESEARCH TOOLS (15 tools)
+# ============================================================
+research_tools:
+  - name: "Elicit"
+    slug: "elicit"
+    category: "research"
+    icon: "images/tools/elicit.svg"
+    emoji: "📖"
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
+    description: "AI research assistant"
+    level: "Intermediate"
+    level_color: "#06b6d4"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Scite"
+    slug: "scite"
+    category: "research"
+    icon: "images/tools/scite.svg"
+    emoji: "📝"
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
+    description: "Smart citations & research"
+    level: "Intermediate"
+    level_color: "#06b6d4"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Semantic Scholar"
+    slug: "semantic-scholar"
+    category: "research"
+    icon: "images/tools/semantic-scholar.svg"
+    emoji: "🎓"
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
+    description: "AI-powered academic search"
+    level: "Beginner"
+    level_color: "#06b6d4"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Research Rabbit"
+    slug: "research-rabbit"
+    category: "research"
+    icon: "images/tools/research-rabbit.svg"
+    emoji: "🐰"
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
+    description: "Citation network visualization"
+    level: "Intermediate"
+    level_color: "#06b6d4"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Scholarcy"
+    slug: "scholarcy"
+    category: "research"
+    icon: "images/tools/scholarcy.svg"
+    emoji: "📄"
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
+    description: "AI article summarization"
+    level: "Beginner"
+    level_color: "#06b6d4"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Connected Papers"
+    slug: "connected-papers"
+    category: "research"
+    icon: "images/tools/connected-papers.svg"
+    emoji: "🔗"
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
+    description: "Visual research explorer"
+    level: "Beginner"
+    level_color: "#06b6d4"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Litmaps"
+    slug: "litmaps"
+    category: "research"
+    icon: "images/tools/litmaps.svg"
+    emoji: "🗺️"
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
+    description: "Literature mapping tool"
+    level: "Beginner"
+    level_color: "#06b6d4"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Gemini Deep Research"
+    slug: "gemini-deep-research"
+    category: "research"
+    icon: "images/tools/gemini-deep-research.svg"
+    emoji: "🔬"
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
+    description: "Google's advanced research AI agent. Conduct comprehensive research with multi-source analysis and detailed reports."
+    level: "Intermediate"
+    level_color: "#06b6d4"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Silatus"
+    slug: "silatus"
+    category: "research"
+    icon: "images/tools/silatus.svg"
+    emoji: "📑"
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
+    description: "AI research automation platform. Generate comprehensive research reports from prompts with citations and source verification."
+    level: "Intermediate"
+    level_color: "#06b6d4"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Scispace"
+    slug: "scispace"
+    category: "research"
+    icon: "images/tools/scispace.ico"
+    emoji: "📄"
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
+    description: "AI copilot for scientific papers. Understand complex research papers with AI explanations, summaries, and answers to your questions."
+    level: "Beginner"
+    level_color: "#06b6d4"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Eightify"
+    slug: "eightify"
+    category: "research"
+    icon: "images/tools/eightify.ico"
+    emoji: "8️⃣"
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
+    description: "YouTube video summarizer powered by AI. Extract key insights from long videos in seconds with timestamped summaries."
+    level: "Beginner"
+    level_color: "#06b6d4"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Glasp"
+    slug: "glasp"
+    category: "research"
+    icon: "images/tools/glasp.ico"
+    emoji: "🖍️"
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
+    description: "Social web highlighter with AI. Highlight and organize web content, get AI summaries, and share your learning with the community."
+    level: "Beginner"
+    level_color: "#06b6d4"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Julius"
+    slug: "julius"
+    category: "research"
+    icon: "images/tools/julius.ico"
+    emoji: "📈"
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
+    description: "AI data analyst for spreadsheets and CSVs. Chat with your data, create visualizations, and perform advanced analysis with natural language."
+    level: "Intermediate"
+    level_color: "#06b6d4"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "QuizGecko"
+    slug: "quizgecko"
+    category: "research"
+    icon: "images/tools/quizgecko.ico"
+    emoji: "🦎"
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
+    description: "Generate quizzes from any content with AI. Turn documents, videos, and articles into interactive quizzes and flashcards instantly."
+    level: "Beginner"
+    level_color: "#06b6d4"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Consensus"
+    slug: "consensus"
+    category: "research"
+    icon: "images/tools/consensus.svg"
+    emoji: "🔍"
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
+    description: "AI-powered academic search engine. Find research papers with AI-extracted insights and consensus analysis from scientific literature."
+    level: "Intermediate"
+    level_color: "#06b6d4"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+# ============================================================
+# DATA & ANALYTICS TOOLS (5 tools)
+# ============================================================
+data_tools:
+  - name: "Pinecone"
+    slug: "pinecone"
+    category: "data"
+    icon: "images/tools/pinecone.ico"
+    emoji: "🌲"
+    gradient: "linear-gradient(135deg, #6366f1, #8b5cf6)"
+    description: "Vector database for AI apps"
+    level: "Advanced"
+    level_color: "#6366f1"
+    status: "Learn Now →"
+    available: true
+    page_url: "day27_pinecone.md"
+
+  - name: "Weaviate"
+    slug: "weaviate"
+    category: "data"
+    icon: "images/tools/weaviate.svg"
+    emoji: "🔷"
+    gradient: "linear-gradient(135deg, #6366f1, #8b5cf6)"
+    description: "Open-source vector database"
+    level: "Advanced"
+    level_color: "#6366f1"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "ChromaDB"
+    slug: "chromadb"
+    category: "data"
+    icon: "images/tools/chromadb.svg"
+    emoji: "🎨"
+    gradient: "linear-gradient(135deg, #6366f1, #8b5cf6)"
+    description: "AI-native embedding database"
+    level: "Advanced"
+    level_color: "#6366f1"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Qdrant"
+    slug: "qdrant"
+    category: "data"
+    icon: "images/tools/qdrant.svg"
+    emoji: "⚡"
+    gradient: "linear-gradient(135deg, #6366f1, #8b5cf6)"
+    description: "High-performance vector search"
+    level: "Advanced"
+    level_color: "#6366f1"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Databricks"
+    slug: "databricks"
+    category: "data"
+    icon: "images/tools/databricks.svg"
+    emoji: "🧱"
+    gradient: "linear-gradient(135deg, #6366f1, #8b5cf6)"
+    description: "Unified analytics platform for data engineering, machine learning, and AI. Build and deploy AI models at scale with collaborative data science."
+    level: "Advanced"
+    level_color: "#6366f1"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+# ============================================================
+# DIRECTORY TOOLS (8 resources)
+# ============================================================
+directory_tools:
+  - name: "There's An AI For That"
+    slug: "theres-an-ai-for-that"
+    category: "directory"
+    icon: "images/tools/there-s-an-ai-for-that.ico"
+    emoji: "🤖"
+    gradient: "linear-gradient(135deg, #fb923c, #f97316)"
+    description: "The largest AI tools database. Find the perfect AI tool for any task with their comprehensive, searchable directory updated daily."
+    level: "Popular"
+    level_color: "#fb923c"
+    status: "Visit →"
+    available: true
+    page_url: "https://theresanaiforthat.com"
+    external: true
+
+  - name: "Future Tools"
+    slug: "future-tools"
+    category: "directory"
+    icon: "images/tools/future-tools.svg"
+    emoji: "🚀"
+    gradient: "linear-gradient(135deg, #fb923c, #f97316)"
+    description: "Curated AI tools collection by Matt Wolfe. Weekly newsletter with latest AI tools, news, and tutorials from an AI expert."
+    level: "Curated"
+    level_color: "#fb923c"
+    status: "Visit →"
+    available: true
+    page_url: "https://www.futuretools.io"
+    external: true
+
+  - name: "Futurepedia"
+    slug: "futurepedia"
+    category: "directory"
+    icon: "images/tools/futurepedia.ico"
+    emoji: "📚"
+    gradient: "linear-gradient(135deg, #fb923c, #f97316)"
+    description: "Comprehensive AI tools directory with detailed reviews, ratings, and comparisons. Features filtering by category, pricing, and use case."
+    level: "Reviews"
+    level_color: "#fb923c"
+    status: "Visit →"
+    available: true
+    page_url: "https://www.futurepedia.io"
+    external: true
+
+  - name: "AI Valley"
+    slug: "ai-valley"
+    category: "directory"
+    icon: "images/tools/ai-valley.svg"
+    emoji: "🏔️"
+    gradient: "linear-gradient(135deg, #fb923c, #f97316)"
+    description: "Handpicked collection of the best AI tools. Organized by use case with detailed descriptions, pricing info, and real user reviews."
+    level: "Curated"
+    level_color: "#fb923c"
+    status: "Visit →"
+    available: true
+    page_url: "https://aivalley.ai"
+    external: true
+
+  - name: "TopAI.tools"
+    slug: "topai-tools"
+    category: "directory"
+    icon: "images/tools/topaitools.svg"
+    emoji: "⭐"
+    gradient: "linear-gradient(135deg, #fb923c, #f97316)"
+    description: "Curated collection of top-rated AI tools. Browse by popularity, category, and pricing to find the best tools for your needs."
+    level: "Top Rated"
+    level_color: "#fb923c"
+    status: "Visit →"
+    available: true
+    page_url: "https://topai.tools"
+    external: true
+
+  - name: "ToolScout"
+    slug: "toolscout"
+    category: "directory"
+    icon: "images/tools/toolscout.svg"
+    emoji: "🔍"
+    gradient: "linear-gradient(135deg, #fb923c, #f97316)"
+    description: "AI-powered tool discovery platform. Find, compare, and track AI tools with intelligent search and personalized recommendations."
+    level: "Smart Search"
+    level_color: "#fb923c"
+    status: "Visit →"
+    available: true
+    page_url: "https://toolscout.ai"
+    external: true
+
+  - name: "AI Depot"
+    slug: "ai-depot"
+    category: "directory"
+    icon: "images/tools/ai-depot.svg"
+    emoji: "🏪"
+    gradient: "linear-gradient(135deg, #fb923c, #f97316)"
+    description: "Community-driven AI tools repository. Discover, share, and discuss the latest AI tools with fellow enthusiasts and professionals."
+    level: "Community"
+    level_color: "#fb923c"
+    status: "Visit →"
+    available: true
+    page_url: "https://aidepot.co"
+    external: true
+
+  - name: "AI Scout"
+    slug: "ai-scout"
+    category: "directory"
+    icon: "images/tools/ai-scout.svg"
+    emoji: "🔭"
+    gradient: "linear-gradient(135deg, #fb923c, #f97316)"
+    description: "AI newsletter and tools discovery. Get weekly updates on the newest AI tools, trends, and tutorials delivered to your inbox."
+    level: "Newsletter"
+    level_color: "#fb923c"
+    status: "Visit →"
+    available: true
+    page_url: "https://aiscout.net"
+    external: true
+
+# ============================================================
+# CATEGORY METADATA
+# ============================================================
+categories:
+  foundation:
+    name: "Foundation"
+    emoji: "🎓"
+    description: "Core AI skills everyone needs"
+    color: "#10b981"
+    color_rgb: "16, 185, 129"
+    
+  creative:
+    name: "Creative"
+    emoji: "🎨"
+    description: "Image generation, design & visual content"
+    color: "#8b5cf6"
+    color_rgb: "139, 92, 246"
+    
+  writing:
+    name: "Writing"
+    emoji: "✍️"
+    description: "Content creation & writing excellence"
+    color: "#3b82f6"
+    color_rgb: "59, 130, 246"
+    
+  technical:
+    name: "Technical"
+    emoji: "💻"
+    description: "Coding & development superpowers"
+    color: "#ef4444"
+    color_rgb: "239, 68, 68"
+    
+  voice:
+    name: "Voice & Audio"
+    emoji: "🎙️"
+    description: "Text-to-speech, transcription & audio AI"
+    color: "#ec4899"
+    color_rgb: "236, 72, 153"
+    
+  video:
+    name: "Video"
+    emoji: "🎬"
+    description: "AI video creation & editing"
+    color: "#14b8a6"
+    color_rgb: "20, 184, 166"
+    
+  business:
+    name: "Business"
+    emoji: "💼"
+    description: "Automation, presentations & productivity"
+    color: "#f59e0b"
+    color_rgb: "245, 158, 11"
+    
+  research:
+    name: "Research"
+    emoji: "📚"
+    description: "AI-powered research & knowledge tools"
+    color: "#06b6d4"
+    color_rgb: "6, 182, 212"
+    
+  data:
+    name: "Data & Analytics"
+    emoji: "📊"
+    description: "Vector databases & AI infrastructure"
+    color: "#6366f1"
+    color_rgb: "99, 102, 241"
+    
+  directory:
+    name: "Directories"
+    emoji: "🔗"
+    description: "Discover more AI tools"
+    color: "#fb923c"
+    color_rgb: "251, 146, 60"

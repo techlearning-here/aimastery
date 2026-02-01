@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="{{ tool.meta_description }}">
+    <meta name="keywords" content="{{ tool.keywords }}">
+    <meta name="author" content="AI Tech Mint">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ tool.name }} Tutorial - {{ tool.short_title }}">
+    <meta property="og:description" content="{{ tool.og_description|default(tool.meta_description) }}">
+    <meta property="og:image" content="https://aitechmint.com/images/{{ tool.slug }}-og.jpg">
+    <meta property="og:url" content="https://aitechmint.com/pages/{{ tool.category }}/{{ tool.slug }}">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ tool.name }} Tutorial - {{ tool.short_title }}">
+    <meta name="twitter:description" content="{{ tool.twitter_description|default(tool.meta_description) }}">
+    
+    <title>{{ tool.name }} Tutorial - {{ tool.short_title }} | AI Tech Mint</title>
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ tool.css_path|default('../../css/styles.css') }}">
+    
+    <style>
+        /* Tool Page Specific Styles - Matches Index Theme */
+        
+        /* CSS Variables - Match Index */
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #8b5cf6;
+            --success-color: #10b981;
+            --dark-bg: #0f1419;
+            --card-bg: #1a1f2e;
+            --text-primary: #f0fdf4;
+            --text-secondary: #d1fae5;
+        }
+        
+        /* Hero Section */
+        .tool-hero {
+            background: linear-gradient(135deg, {{ tool.gradient_start|default('var(--primary-color)') }} 0%, {{ tool.gradient_end|default('var(--secondary-color)') }} 100%);
+            padding: 50px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tool-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .tool-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .tool-logo {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            flex-shrink: 0;
+        }
+        
+        .tool-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+        }
+        
+        .tool-tagline {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .tool-stats {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+        
+        .stat-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        
+        /* CTA Buttons */
+        .cta-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--success-color), #059669);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+        }
+        
+        .cta-primary:hover {
+            background: linear-gradient(135deg, #059669, #047857);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+        }
+        
+        .cta-secondary {
+            display: inline-block;
+            background: transparent;
+            color: white;
+            padding: 16px 40px;
+            border: 2px solid white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            margin-left: 15px;
+        }
+        
+        .cta-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Content Sections */
+        .tool-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        .tool-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .tool-section h3 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            color: var(--success-color);
+        }
+        
+        .tool-section p {
+            color: var(--text-secondary);
+        }
+        
+        .tool-section ul {
+            color: var(--text-secondary);
+        }
+        
+        /* Feature Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
+            border-color: var(--primary-color);
+        }
+        
+        .feature-card p {
+            color: var(--text-secondary);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card h3 {
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+        
+        /* Pricing Table */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .pricing-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 40px 30px;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            text-align: center;
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid var(--success-color);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--success-color);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+        
+        .pricing-card h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--success-color);
+            margin: 20px 0;
+        }
+        
+        .price-period {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+        
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            color: var(--text-secondary);
+        }
+        
+        .pricing-features li:before {
+            content: "✓ ";
+            color: var(--success-color);
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        
+        .pricing-cta {
+            display: block;
+            background: var(--success-color);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+        
+        .pricing-cta:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+        
+        /* Pros & Cons */
+        .pros-cons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .pros-card, .cons-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        
+        .pros-card {
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+        
+        .cons-card {
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+        
+        .pros-card h3 {
+            color: var(--success-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 0;
+        }
+        
+        .cons-card h3 {
+            color: #ef4444;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 0;
+        }
+        
+        .pros-card ul, .cons-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .pros-card li, .cons-card li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+        
+        .pros-card li:before {
+            content: "✓ ";
+            color: var(--success-color);
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        
+        .cons-card li:before {
+            content: "✗ ";
+            color: #ef4444;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        
+        /* Inline CTA Box */
+        .inline-cta {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 40px 0;
+            color: white;
+        }
+        
+        .inline-cta h3 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 2px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+        
+        .faq-answer {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        /* Tips Box */
+        .tip-box {
+            background: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid var(--success-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .tip-box strong {
+            color: var(--success-color);
+        }
+        
+        /* Warning Box */
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .warning-box strong {
+            color: #f59e0b;
+        }
+        
+        /* Final CTA Section */
+        .final-cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin: 40px 0;
+            color: white;
+        }
+        
+        .final-cta-section h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        /* Video Embed */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Affiliate Disclosure */
+        .affiliate-disclosure {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            margin: 40px 0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Theme Toggle Button */
+        .theme-toggle-fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            border: 2px solid var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+        
+        .theme-toggle-fixed:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .tool-logo {
+                width: 50px;
+                height: 50px;
+                font-size: 26px;
+            }
+            
+            .tool-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tool-tagline {
+                font-size: 1.1rem;
+            }
+            
+            .cta-secondary {
+                margin-left: 0;
+                margin-top: 15px;
+                display: block;
+            }
+            
+            .features-grid,
+            .pricing-grid,
+            .pros-cons-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body style="background: var(--dark-bg); color: var(--text-primary); margin: 0; padding: 0;">
+
+<!-- Navigation -->
+<nav style="background: var(--card-bg); padding: 15px 0; border-bottom: 2px solid var(--primary-color); position: sticky; top: 0; z-index: 100;">
+    <div class="container" style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center;">
+                <a href="{{ tool.home_path|default('../../index.html') }}" style="text-decoration: none; color: var(--success-color); font-size: 1.5rem; font-weight: 800; transition: color 0.3s;">
+                    AI Tech Mint
+                </a>
+            </div>
+            <div>
+                <a href="{{ tool.home_path|default('../../index.html') }}" style="color: var(--primary-color); text-decoration: none; padding: 8px 16px; transition: color 0.3s;" onmouseover="this.style.color='var(--success-color)'" onmouseout="this.style.color='var(--primary-color)'">← Back to Tools</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="tool-hero">
+    <div class="tool-hero-content">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 20px;">
+            <div class="tool-logo" style="margin: 0;">
+                {{ tool.emoji }}
+            </div>
+            <h1 style="margin: 0;">{{ tool.name }}</h1>
+        </div>
+        <p class="tool-tagline">{{ tool.tagline }}</p>
+        
+        <!-- Hero CTA -->
+        <div>
+            <a href="{{ tool.cta_url }}" 
+               target="_blank" 
+               rel="noopener sponsored" 
+               class="cta-primary"
+               onclick="trackAffiliateClick('{{ tool.slug }}', 'hero')">
+                {{ tool.cta_text|default('Start Free Trial →') }}
+            </a>
+            <a href="#getting-started" class="cta-secondary">
+                Learn How to Use
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<div style="background: var(--dark-bg);">
+
+<!-- ============================================================ -->
+<!-- CONTENT SECTIONS - Fill these in for each tool               -->
+<!-- ============================================================ -->
+
+<!-- 1. What Is [Tool]? -->
+<section class="tool-section">
+    <h2>What Is {{ tool.name }}?</h2>
+    
+    {{ content.what_is|safe }}
+    
+    {% if content.who_is_for %}
+    <h3>Who Is {{ tool.name }} For?</h3>
+    <ul style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+        {% for audience in content.who_is_for %}
+        <li><strong>{{ audience.title }}</strong> - {{ audience.description }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+    {% if content.overview_video_id %}
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/{{ content.overview_video_id }}" 
+            title="What is {{ tool.name }}? - Overview Tutorial" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 10px; font-style: italic;">
+        📹 Video tutorial: Introduction to {{ tool.name }} (3-5 minutes)
+    </p>
+    {% endif %}
+    
+    <!-- Post-Introduction CTA -->
+    <div class="inline-cta">
+        <h3>Ready to Get Started?</h3>
+        <p style="margin-bottom: 25px;">{{ tool.cta_subtitle|default('Join millions of users today') }}</p>
+        <a href="{{ tool.cta_url }}" 
+           target="_blank" 
+           rel="noopener sponsored" 
+           class="cta-primary"
+           onclick="trackAffiliateClick('{{ tool.slug }}', 'post-intro')">
+            Try {{ tool.name }} Free →
+        </a>
+    </div>
+</section>
+
+<!-- 2. Key Features -->
+{% if content.features %}
+<section class="tool-section">
+    <h2>Key Features</h2>
+    <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 30px;">
+        {{ content.features_intro|default('Here are the features that make ' + tool.name + ' stand out:') }}
+    </p>
+    
+    <div class="features-grid">
+        {% for feature in content.features %}
+        <div class="feature-card">
+            <div class="feature-icon">{{ feature.icon }}</div>
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.description }}</p>
+            {% if feature.pro_tip %}
+            <p><strong>Pro Tip:</strong> {{ feature.pro_tip }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+<!-- 3. Getting Started -->
+{% if content.getting_started %}
+<section class="tool-section" id="getting-started">
+    <h2>Getting Started with {{ tool.name }}</h2>
+    
+    {{ content.getting_started|safe }}
+</section>
+{% endif %}
+
+<!-- 4. Pricing -->
+{% if content.pricing %}
+<section class="tool-section" id="pricing">
+    <h2>{{ tool.name }} Pricing</h2>
+    
+    {% if content.pricing_summary %}
+    <div class="tip-box">
+        💡 <strong>Quick Summary:</strong> {{ content.pricing_summary }}
+    </div>
+    {% endif %}
+    
+    <div class="pricing-grid">
+        {% for plan in content.pricing %}
+        <div class="pricing-card{% if plan.featured %} featured{% endif %}">
+            {% if plan.badge %}
+            <div class="pricing-badge">{{ plan.badge }}</div>
+            {% endif %}
+            <h3>{{ plan.name }}</h3>
+            <div class="price">{{ plan.price }}<span class="price-period">{{ plan.period|default('/mo') }}</span></div>
+            <ul class="pricing-features">
+                {% for feature in plan.features %}
+                <li>{{ feature }}</li>
+                {% endfor %}
+            </ul>
+            <a href="{{ plan.cta_url|default(tool.cta_url) }}" 
+               target="_blank" 
+               rel="noopener sponsored" 
+               class="pricing-cta"
+               onclick="trackAffiliateClick('{{ tool.slug }}', 'pricing-{{ plan.name|lower|replace(' ', '-') }}')">
+                {{ plan.cta_text|default('Get Started') }}
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+<!-- 5. Pros & Cons -->
+{% if content.pros or content.cons %}
+<section class="tool-section">
+    <h2>{{ tool.name }} Pros & Cons</h2>
+    <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 20px;">
+        {{ content.pros_cons_intro|default('Here\'s an honest assessment of ' + tool.name + ':') }}
+    </p>
+    
+    <div class="pros-cons-grid">
+        {% if content.pros %}
+        <div class="pros-card">
+            <h3>👍 Pros</h3>
+            <ul>
+                {% for pro in content.pros %}
+                <li>{{ pro }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        
+        {% if content.cons %}
+        <div class="cons-card">
+            <h3>👎 Cons</h3>
+            <ul>
+                {% for con in content.cons %}
+                <li>{{ con }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endif %}
+
+<!-- 6. Tips & Best Practices -->
+{% if content.tips %}
+<section class="tool-section">
+    <h2>{{ tool.name }} Tips & Best Practices</h2>
+    
+    {{ content.tips|safe }}
+</section>
+{% endif %}
+
+<!-- 7. FAQ -->
+{% if content.faq %}
+<section class="tool-section">
+    <h2>Frequently Asked Questions</h2>
+    
+    {% for item in content.faq %}
+    <div class="faq-item">
+        <div class="faq-question">{{ item.question }}</div>
+        <div class="faq-answer">{{ item.answer }}</div>
+    </div>
+    {% endfor %}
+</section>
+{% endif %}
+
+<!-- 8. Final CTA -->
+<section class="tool-section">
+    <div class="final-cta-section">
+        <h2>Start Using {{ tool.name }} Today</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.95;">
+            {{ tool.final_cta_text|default('Get started free - no credit card required.') }}
+        </p>
+        
+        <a href="{{ tool.cta_url }}" 
+           target="_blank" 
+           rel="noopener sponsored" 
+           class="cta-primary"
+           style="font-size: 1.2rem; padding: 20px 50px;"
+           onclick="trackAffiliateClick('{{ tool.slug }}', 'final-cta')">
+            Try {{ tool.name }} Free →
+        </a>
+        
+        {% if tool.trust_points %}
+        <div style="margin-top: 30px; font-size: 1.1rem; color: var(--text-secondary);">
+            <p>{{ tool.trust_points }}</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Affiliate Disclosure -->
+<section class="tool-section">
+    <div class="affiliate-disclosure">
+        <strong style="color: #f59e0b;">💡 Affiliate Disclosure:</strong> This page contains affiliate links to {{ tool.name }}. If you sign up through our links, we may earn a commission at no additional cost to you. We only recommend tools we've personally tested and believe provide genuine value. Our reviews remain honest and unbiased regardless of affiliate relationships.
+    </div>
+</section>
+
+<!-- Related Tools -->
+{% if content.related_tools %}
+<section class="tool-section">
+    <h2>Related Tools</h2>
+    <p style="margin-bottom: 30px;">Explore other tools that complement {{ tool.name }}:</p>
+    
+    <div class="features-grid">
+        {% for related in content.related_tools %}
+        <div class="feature-card">
+            <div class="feature-icon">{{ related.icon }}</div>
+            <h3>{{ related.name }}</h3>
+            <p>{{ related.description }}</p>
+            <a href="{{ related.url|default('#') }}" style="color: #10b981; font-weight: 600;">Learn More →</a>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="{{ tool.home_path|default('../../index.html') }}" style="display: inline-block; padding: 12px 30px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">
+            ← Back to All Tools
+        </a>
+    </div>
+</section>
+{% endif %}
+
+</div>
+
+<!-- Tracking Script -->
+<script>
+function trackAffiliateClick(tool, placement) {
+    // Google Analytics 4 event tracking
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'affiliate_click', {
+            'tool_name': tool,
+            'placement': placement,
+            'page_url': window.location.href
+        });
+    }
+    console.log('Affiliate click tracked:', tool, placement);
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+// Theme Toggle Functionality
+(function() {
+    const STORAGE_KEY = 'aiMastery_theme';
+    
+    function getSavedTheme() {
+        try {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            return saved ? JSON.parse(saved) : 'dark';
+        } catch (e) {
+            return 'dark';
+        }
+    }
+    
+    function saveTheme(theme) {
+        try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(theme));
+        } catch (e) {
+            console.error('Failed to save theme:', e);
+        }
+    }
+    
+    function applyTheme(theme) {
+        if (theme === 'light') {
+            document.body.classList.add('light-theme');
+        } else {
+            document.body.classList.remove('light-theme');
+        }
+        updateToggleButton(theme);
+    }
+    
+    function updateToggleButton(theme) {
+        const button = document.querySelector('.theme-toggle-fixed');
+        if (button) {
+            button.innerHTML = `<span class="theme-icon">${theme === 'dark' ? '☀️' : '🌙'}</span>`;
+            button.title = theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+        }
+    }
+    
+    function toggleTheme() {
+        const currentTheme = getSavedTheme();
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        applyTheme(newTheme);
+        saveTheme(newTheme);
+    }
+    
+    function addToggleButton() {
+        const currentTheme = getSavedTheme();
+        const buttonHTML = `
+            <button class="theme-toggle-fixed" onclick="window.toggleTheme()" title="${currentTheme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}">
+                <span class="theme-icon">${currentTheme === 'dark' ? '☀️' : '🌙'}</span>
+            </button>
+        `;
+        document.body.insertAdjacentHTML('beforeend', buttonHTML);
+    }
+    
+    function initTheme() {
+        const savedTheme = getSavedTheme();
+        applyTheme(savedTheme);
+        addToggleButton();
+    }
+    
+    window.toggleTheme = toggleTheme;
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initTheme);
+    } else {
+        initTheme();
+    }
+    
+    window.addEventListener('storage', function(e) {
+        if (e.key === STORAGE_KEY && e.newValue) {
+            try {
+                const newTheme = JSON.parse(e.newValue);
+                applyTheme(newTheme);
+            } catch (err) {
+                console.error('Failed to parse theme from storage event:', err);
+            }
+        }
+    });
+})();
+</script>
+
+</body>
+</html>

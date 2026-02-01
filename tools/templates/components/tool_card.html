@@ -1,0 +1,28 @@
+{# Tool Card Component - Renders a single tool card #}
+<div class="tool-card tool-card-{{ tool.category }}" 
+     data-name="{{ tool.name|lower }}" 
+     data-category="{{ tool.category }}"
+     data-level="{{ tool.level|lower }}"
+     {% if tool.available and tool.page_url %}onclick="window.location='{{ tool.page_url }}'" style="cursor: pointer;"{% endif %}>
+    
+    <div class="tool-card-header">
+        <img src="{{ tool.icon }}" 
+             alt="{{ tool.name }}" 
+             loading="lazy" 
+             class="tool-card-icon" 
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="tool-card-icon-fallback" style="background: {{ tool.gradient }};">
+            {{ tool.emoji }}
+        </div>
+        <div class="tool-card-name">{{ tool.name }}</div>
+    </div>
+    <div class="tool-card-description">{{ tool.description }}</div>
+    <div class="tool-card-footer">
+        <span class="tool-card-level" style="color: {{ tool.level_color }};">{{ tool.level }}</span>
+        {% if tool.available and tool.page_url %}
+        <span class="tool-card-status available">Learn →</span>
+        {% else %}
+        <span class="tool-card-status">{{ tool.status }}</span>
+        {% endif %}
+    </div>
+</div>
