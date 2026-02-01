@@ -1,0 +1,59 @@
+# GitHub Actions Workflow - Auto Build and Deploy
+# This automatically builds your site when you push changes
+# Uncomment when you're ready to automate the build process
+
+# name: Build and Deploy to GitHub Pages
+# 
+# on:
+#   push:
+#     branches: [ main ]
+#     paths:
+#       - 'tools/**'           # Trigger on changes to templates or data
+#       - 'css/**'
+#       - 'images/**'
+# 
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
+#     
+#     steps:
+#       - name: 📥 Checkout repository
+#         uses: actions/checkout@v4
+#       
+#       - name: 🐍 Setup Python
+#         uses: actions/setup-python@v5
+#         with:
+#           python-version: '3.11'
+#           cache: 'pip'
+#       
+#       - name: 📦 Install dependencies
+#         run: |
+#           cd tools
+#           pip install -r requirements.txt
+#       
+#       - name: 🔨 Build site
+#         run: |
+#           cd tools
+#           python build.py
+#       
+#       - name: 📋 Copy files to root for GitHub Pages
+#         run: |
+#           cp output/index.html index.html
+#           # Add other copy commands as needed
+#       
+#       - name: 📤 Commit and push generated files
+#         run: |
+#           git config --local user.email "github-actions[bot]@users.noreply.github.com"
+#           git config --local user.name "github-actions[bot]"
+#           git add index.html
+#           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-build: Update generated files [skip ci]"
+#           git push
+# 
+# # Alternative: Deploy to gh-pages branch (requires changing GitHub Pages settings)
+# # 
+# #       - name: 🚀 Deploy to gh-pages
+# #         uses: peaceiris/actions-gh-pages@v3
+# #         with:
+# #           github_token: ${{ secrets.GITHUB_TOKEN }}
+# #           publish_dir: ./output
+# #           publish_branch: gh-pages
