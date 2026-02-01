@@ -576,13 +576,25 @@
                     }
                 });
                 
-                // Hide empty category sections
+                // Hide empty category sections and update counts
                 categorySections.forEach(section => {
                     const visibleCards = section.querySelectorAll('.tool-card:not(.filtered-out)');
+                    const countSpan = section.querySelector('.category-count');
+                    
                     if (visibleCards.length === 0) {
                         section.classList.add('all-filtered');
                     } else {
                         section.classList.remove('all-filtered');
+                    }
+                    
+                    // Update category count
+                    if (countSpan) {
+                        const total = countSpan.dataset.total;
+                        if (visibleCards.length < parseInt(total)) {
+                            countSpan.textContent = `${visibleCards.length}/${total}`;
+                        } else {
+                            countSpan.textContent = total;
+                        }
                     }
                 });
                 
