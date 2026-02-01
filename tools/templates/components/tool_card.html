@@ -1,6 +1,7 @@
 {# Tool Card Component - Renders a single tool card #}
 <div class="tool-card tool-card-{{ tool.category }}{% if tool.popular %} popular-tool{% endif %}" 
      data-name="{{ tool.name|lower }}" 
+     data-slug="{{ tool.slug }}"
      data-category="{{ tool.category }}"
      data-level="{{ tool.level|lower }}"
      data-popular="{{ 'true' if tool.popular else 'false' }}"

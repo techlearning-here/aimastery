@@ -469,39 +469,79 @@
         window.ThemeSwitcher = ThemeSwitcher;
         window.FeedbackSystem = FeedbackSystem;
         
-        // ==================== POPULAR TOOLS FILTER ====================
-        const PopularToolsFilter = {
+        // ==================== USE CASE FILTER ====================
+        const UseCaseFilter = {
+            currentUseCase: 'all',
+            allowedTools: null,
+            
             init() {
-                const toggle = document.getElementById('showPopularOnly');
-                if (!toggle) return;
+                const chips = document.querySelectorAll('.use-case-chip');
+                if (chips.length === 0) return;
+                
+                chips.forEach(chip => {
+                    chip.addEventListener('click', () => {
+                        this.selectUseCase(chip);
+                    });
+                });
                 
                 // Load saved preference
-                const saved = localStorage.getItem('aiMastery_showPopular');
-                if (saved === 'true') {
-                    toggle.checked = true;
-                    this.applyFilter(true);
+                const saved = localStorage.getItem('aiMastery_useCase');
+                if (saved && saved !== 'all') {
+                    const savedChip = document.querySelector(`.use-case-chip[data-usecase="${saved}"]`);
+                    if (savedChip) {
+                        this.selectUseCase(savedChip);
+                    }
                 }
-                
-                // Update count
-                this.updateCount();
-                
-                // Listen for changes
-                toggle.addEventListener('change', (e) => {
-                    this.applyFilter(e.target.checked);
-                    localStorage.setItem('aiMastery_showPopular', e.target.checked);
-                });
             },
             
-            applyFilter(showPopularOnly) {
+            selectUseCase(chip) {
+                // Update active state
+                document.querySelectorAll('.use-case-chip').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+                
+                const useCase = chip.dataset.usecase;
+                this.currentUseCase = useCase;
+                
+                // Get allowed tools for this use case
+                if (useCase === 'all') {
+                    this.allowedTools = null;
+                } else {
+                    const toolsStr = chip.dataset.tools || '';
+                    this.allowedTools = new Set(toolsStr.split(',').filter(t => t));
+                }
+                
+                // Apply filter
+                this.applyFilter();
+                
+                // Update info text
+                this.updateInfo(chip);
+                
+                // Save preference
+                localStorage.setItem('aiMastery_useCase', useCase);
+            },
+            
+            applyFilter() {
                 const toolCards = document.querySelectorAll('.tool-card');
                 const categorySections = document.querySelectorAll('[id^="foundation"], [id^="creative"], [id^="writing"], [id^="technical"], [id^="business"], [id^="research"], [id^="voice"], [id^="video"], [id^="data"], [id^="directories"]');
                 
+                let visibleCount = 0;
+                
                 toolCards.forEach(card => {
+                    const slug = card.dataset.slug;
                     const isPopular = card.dataset.popular === 'true';
-                    if (showPopularOnly && !isPopular) {
-                        card.classList.add('filtered-out');
-                    } else {
+                    const showPopularOnly = document.getElementById('showPopularOnly')?.checked;
+                    
+                    // Check use case filter
+                    let matchesUseCase = this.allowedTools === null || this.allowedTools.has(slug);
+                    
+                    // Check popular filter
+                    let matchesPopular = !showPopularOnly || isPopular;
+                    
+                    if (matchesUseCase && matchesPopular) {
                         card.classList.remove('filtered-out');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('filtered-out');
                     }
                 });
                 
@@ -513,6 +553,51 @@
                     } else {
                         section.classList.remove('all-filtered');
                     }
+                });
+                
+                return visibleCount;
+            },
+            
+            updateInfo(chip) {
+                const infoEl = document.getElementById('useCaseInfo');
+                if (!infoEl) return;
+                
+                const useCase = chip.dataset.usecase;
+                const label = chip.querySelector('.chip-label')?.textContent || 'All Tools';
+                
+                if (useCase === 'all') {
+                    const total = document.querySelectorAll('.tool-card').length;
+                    infoEl.innerHTML = `<span class="info-text">Showing all <strong>${total}</strong> tools</span>`;
+                } else {
+                    const toolsStr = chip.dataset.tools || '';
+                    const toolCount = toolsStr.split(',').filter(t => t).length;
+                    const visible = document.querySelectorAll('.tool-card:not(.filtered-out)').length;
+                    infoEl.innerHTML = `<span class="info-text"><strong>${visible}</strong> tools for <strong>${label}</strong></span>`;
+                }
+            }
+        };
+        
+        // ==================== POPULAR TOOLS FILTER ====================
+        const PopularToolsFilter = {
+            init() {
+                const toggle = document.getElementById('showPopularOnly');
+                if (!toggle) return;
+                
+                // Load saved preference
+                const saved = localStorage.getItem('aiMastery_showPopular');
+                if (saved === 'true') {
+                    toggle.checked = true;
+                }
+                
+                // Update count
+                this.updateCount();
+                
+                // Listen for changes
+                toggle.addEventListener('change', (e) => {
+                    // Re-apply use case filter (which includes popular filter)
+                    UseCaseFilter.applyFilter();
+                    UseCaseFilter.updateInfo(document.querySelector('.use-case-chip.active'));
+                    localStorage.setItem('aiMastery_showPopular', e.target.checked);
                 });
             },
             
@@ -528,9 +613,13 @@
         
         // Initialize on DOM ready
         document.addEventListener('DOMContentLoaded', () => {
+            UseCaseFilter.init();
             PopularToolsFilter.init();
+            // Apply initial filter
+            UseCaseFilter.applyFilter();
         });
         
+        window.UseCaseFilter = UseCaseFilter;
         window.PopularToolsFilter = PopularToolsFilter;
     </script>
     

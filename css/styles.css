@@ -2019,6 +2019,119 @@ html {
     }
 }
 
+/* ==================== USE CASE FILTER ==================== */
+
+.use-case-filter {
+    background: rgba(59, 130, 246, 0.05);
+    border: 2px solid rgba(59, 130, 246, 0.2);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.use-case-title {
+    text-align: center;
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.use-case-chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.use-case-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    background: rgba(30, 41, 59, 0.6);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.use-case-chip:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+}
+
+.use-case-chip.active {
+    background: var(--chip-color, linear-gradient(135deg, #3b82f6, #8b5cf6));
+    border-color: var(--chip-color, #3b82f6);
+    color: white;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.chip-emoji {
+    font-size: 1.1rem;
+}
+
+.chip-label {
+    white-space: nowrap;
+}
+
+.use-case-info {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+}
+
+.use-case-info strong {
+    color: var(--primary-color);
+}
+
+/* Light Mode for Use Case Filter */
+[data-theme="light"] .use-case-filter {
+    background: rgba(59, 130, 246, 0.03);
+}
+
+[data-theme="light"] .use-case-chip {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #1a202c;
+}
+
+[data-theme="light"] .use-case-chip:hover {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+[data-theme="light"] .use-case-chip.active {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .use-case-filter {
+        padding: 20px 15px;
+    }
+    
+    .use-case-chip {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+    
+    .chip-emoji {
+        font-size: 1rem;
+    }
+    
+    .use-case-title {
+        font-size: 1.1rem;
+    }
+}
+
 /* ==================== POPULAR TOOLS TOGGLE ==================== */
 
 .popular-toggle-container {

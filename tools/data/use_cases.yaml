@@ -1,0 +1,236 @@
+# Use Cases - Maps user goals to relevant AI tools
+# Each use case has an ID, name, emoji, description, and list of tool slugs
+
+use_cases:
+  - id: "blog-writing"
+    name: "Blog & Article Writing"
+    emoji: "✍️"
+    description: "Create SEO-optimized blog posts, articles, and long-form content"
+    color: "#3b82f6"
+    tools:
+      - chatgpt
+      - claude
+      - gemini
+      - jasper
+      - copy-ai
+      - writesonic
+      - koalawriter
+      - grammarly
+      - quillbot
+      - notion-ai
+      - sudowrite
+      - shortly-ai
+
+  - id: "social-media"
+    name: "Social Media Content"
+    emoji: "📱"
+    description: "Create engaging posts, captions, and campaigns for social platforms"
+    color: "#ec4899"
+    tools:
+      - canva
+      - copy-ai
+      - chatgpt
+      - virality-ai
+      - google-pomelli
+      - midjourney
+      - dall-e-3
+      - adobe-firefly
+      - ideogram
+      - creatify-ai
+
+  - id: "image-generation"
+    name: "Image Generation"
+    emoji: "🎨"
+    description: "Create artwork, graphics, illustrations, and visual content"
+    color: "#8b5cf6"
+    tools:
+      - midjourney
+      - dall-e-3
+      - stable-diffusion
+      - leonardo-ai
+      - adobe-firefly
+      - ideogram
+      - clipdrop
+      - canva
+      - starryai
+      - stockimg-ai
+      - microsoft-designer
+
+  - id: "3d-video"
+    name: "3D Video Production"
+    emoji: "🎬"
+    description: "Create 3D animations, motion graphics, and cinematic content"
+    color: "#14b8a6"
+    tools:
+      - luma-ai
+      - runway
+      - wonder-dynamics
+      - pika-labs
+      - kaiber
+      - runwayml
+      - synthesia
+
+  - id: "cartoon-characters"
+    name: "Cartoon Character Creation"
+    emoji: "🎭"
+    description: "Design animated characters, mascots, and cartoon avatars"
+    color: "#f59e0b"
+    tools:
+      - leonardo-ai
+      - midjourney
+      - stable-diffusion
+      - kaiber
+      - dall-e-3
+      - canva
+      - adobe-firefly
+
+  - id: "ai-avatars"
+    name: "Realistic AI Avatars"
+    emoji: "👤"
+    description: "Create digital humans and talking avatars for brands and reels"
+    color: "#ef4444"
+    tools:
+      - heygen
+      - synthesia
+      - d-id
+      - creatify-ai
+      - elevenlabs
+      - runway
+      - veed-io
+      - colossyan
+
+  - id: "video-production"
+    name: "Video Editing & Production"
+    emoji: "🎥"
+    description: "Edit, enhance, and produce marketing and educational videos"
+    color: "#06b6d4"
+    tools:
+      - synthesia
+      - heygen
+      - descript
+      - lumen5
+      - pictory
+      - runway
+      - veed-io
+      - invideo
+      - kapwing
+      - opus-clip
+
+  - id: "presentations"
+    name: "Presentation Creation"
+    emoji: "📊"
+    description: "Build professional slides, pitch decks, and visual presentations"
+    color: "#10b981"
+    tools:
+      - gamma
+      - magicslides
+      - canva
+      - beautiful-ai
+      - tome
+      - chatgpt
+      - google-slides
+
+  - id: "podcast-audio"
+    name: "Podcast & Audio"
+    emoji: "🎙️"
+    description: "Create voiceovers, podcasts, and audio content"
+    color: "#a855f7"
+    tools:
+      - elevenlabs
+      - descript
+      - speechify
+      - play-ht
+      - murf-ai
+      - resemble-ai
+      - soundraw
+      - voiceair-ai
+
+  - id: "marketing-ads"
+    name: "Marketing & Ads"
+    emoji: "📢"
+    description: "Create ad copy, marketing campaigns, and promotional content"
+    color: "#f97316"
+    tools:
+      - jasper
+      - copy-ai
+      - creatify-ai
+      - canva
+      - adobe-firefly
+      - chatgpt
+      - adcreative-ai
+      - writesonic
+
+  - id: "coding"
+    name: "Coding & Development"
+    emoji: "💻"
+    description: "Write, debug, and review code with AI assistance"
+    color: "#ef4444"
+    tools:
+      - github-copilot
+      - cursor
+      - codeium
+      - replit-ghostwriter
+      - tabnine
+      - amazon-codewhisperer
+      - claude
+      - chatgpt
+      - google-antigravity
+      - google-opal
+
+  - id: "research"
+    name: "Academic Research"
+    emoji: "🔬"
+    description: "Find papers, summarize studies, and conduct research"
+    color: "#06b6d4"
+    tools:
+      - elicit
+      - semantic-scholar
+      - chatpdf
+      - perplexity
+      - scispace
+      - consensus
+      - chatgpt
+      - claude
+      - gemini
+
+  - id: "automation"
+    name: "Workflow Automation"
+    emoji: "⚡"
+    description: "Automate repetitive tasks and streamline workflows"
+    color: "#f59e0b"
+    tools:
+      - zapier
+      - make
+      - monday-com
+      - notion-ai
+      - bardeen
+      - clickup
+      - airtable
+
+  - id: "email-writing"
+    name: "Email Writing"
+    emoji: "📧"
+    description: "Compose professional emails, newsletters, and responses"
+    color: "#3b82f6"
+    tools:
+      - chatgpt
+      - grammarly
+      - superhuman
+      - copy-ai
+      - jasper
+      - compose-ai
+      - wordtune
+
+  - id: "logo-branding"
+    name: "Logo & Branding"
+    emoji: "🎯"
+    description: "Create logos, brand identity, and visual branding assets"
+    color: "#8b5cf6"
+    tools:
+      - looka
+      - canva
+      - adobe-firefly
+      - ideogram
+      - midjourney
+      - dall-e-3
+      - kittl

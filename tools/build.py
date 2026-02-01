@@ -33,15 +33,19 @@ def load_data():
     # Count total tools across all categories and collect featured tools
     total_tools = 0
     featured_tools = []
+    all_tools_by_slug = {}  # Map slug -> tool for use case matching
     
     for category in TOOL_CATEGORIES:
         tools = data.get(category, [])
         total_tools += len(tools)
         
-        # Collect featured tools
+        # Collect featured tools and build slug map
         for tool in tools:
             if tool.get('featured', False):
                 featured_tools.append(tool)
+            # Build slug -> tool mapping
+            if 'slug' in tool:
+                all_tools_by_slug[tool['slug']] = tool
         
         # Update category metadata with tool counts
         cat_key = category.replace('_tools', '')
@@ -50,9 +54,25 @@ def load_data():
     
     data['total_tools'] = total_tools
     data['featured_tools'] = featured_tools
+    data['all_tools_by_slug'] = all_tools_by_slug
     
     print(f"   ✅ Loaded {total_tools} tools ({len(featured_tools)} featured)")
     return data
+
+def load_use_cases():
+    """Load use cases data from YAML"""
+    print("📂 Loading use cases...")
+    use_cases_file = Path('data/use_cases.yaml')
+    if not use_cases_file.exists():
+        print("   ⚠️  No use_cases.yaml found, skipping")
+        return []
+    
+    with open(use_cases_file, 'r') as f:
+        data = yaml.safe_load(f)
+    
+    use_cases = data.get('use_cases', [])
+    print(f"   ✅ Loaded {len(use_cases)} use cases")
+    return use_cases
 
 def load_tool_page_data(yaml_file):
     """Load tool page data from a YAML file"""
@@ -207,6 +227,10 @@ def main():
     try:
         # Load data
         data = load_data()
+        
+        # Load use cases
+        use_cases = load_use_cases()
+        data['use_cases'] = use_cases
         
         # Setup Jinja2
         env = setup_jinja2()

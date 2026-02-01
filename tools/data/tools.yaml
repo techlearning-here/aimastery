@@ -1258,6 +1258,60 @@ video_tools:
     available: false
     page_url: null
 
+  - name: "Luma AI"
+    slug: "luma-ai"
+    category: "video"
+    icon: "images/tools/luma-ai.svg"
+    emoji: "🌟"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "Create stunning 3D videos and animations from text or images. Generate cinematic 3D content with Dream Machine for marketing, films, and creative projects."
+    level: "Intermediate"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+    popular: true
+
+  - name: "D-ID"
+    slug: "d-id"
+    category: "video"
+    icon: "images/tools/d-id.svg"
+    emoji: "👤"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "Create realistic AI avatars and talking head videos. Transform photos into speaking digital humans for marketing, training, and personalized content."
+    level: "Beginner"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+    popular: true
+
+  - name: "Kaiber"
+    slug: "kaiber"
+    category: "video"
+    icon: "images/tools/kaiber.svg"
+    emoji: "🎭"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "AI video generation for creative storytelling. Create animated videos, music visualizers, and artistic content from images or text prompts."
+    level: "Intermediate"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Wonder Dynamics"
+    slug: "wonder-dynamics"
+    category: "video"
+    icon: "images/tools/wonder-dynamics.svg"
+    emoji: "✨"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "AI-powered VFX and 3D character animation. Automatically animate CG characters in live-action scenes without complex motion capture or 3D software."
+    level: "Advanced"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
 # ============================================================
 # BUSINESS TOOLS (21 tools)
 # ============================================================

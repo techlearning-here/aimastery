@@ -72,6 +72,26 @@
         All top curated tools organized by category. Click any tool to start learning!
     </p>
     
+    <!-- Use Case Filter -->
+    <div class="use-case-filter">
+        <h3 class="use-case-title">🎯 What do you want to create?</h3>
+        <div class="use-case-chips" id="useCaseChips">
+            <button class="use-case-chip active" data-usecase="all">
+                <span class="chip-emoji">🌟</span>
+                <span class="chip-label">All Tools</span>
+            </button>
+            {% for uc in use_cases %}
+            <button class="use-case-chip" data-usecase="{{ uc.id }}" data-tools="{{ uc.tools | join(',') }}" style="--chip-color: {{ uc.color }};">
+                <span class="chip-emoji">{{ uc.emoji }}</span>
+                <span class="chip-label">{{ uc.name }}</span>
+            </button>
+            {% endfor %}
+        </div>
+        <div class="use-case-info" id="useCaseInfo">
+            <span class="info-text">Showing all <strong>{{ total_tools }}</strong> tools</span>
+        </div>
+    </div>
+    
     <!-- Popular Tools Toggle -->
     <div class="popular-toggle-container">
         <label class="popular-toggle">
