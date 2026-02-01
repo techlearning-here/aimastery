@@ -42,15 +42,20 @@ jobs:
           cd tools
           python build.py
       
-      - name: Copy files to root for GitHub Pages
+      - name: Copy generated files to root for GitHub Pages
         run: |
+          # Copy index.html
           cp output/index.html index.html
-          # Add other copy commands as needed
+          
+          # Copy generated tool pages (preserve directory structure)
+          if [ -d "output/pages" ]; then
+            cp -r output/pages/* pages/ 2>/dev/null || true
+          fi
       
       - name: Commit and push generated files
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add index.html
+          git add index.html pages/
           git diff --quiet && git diff --staged --quiet || git commit -m "Auto-build: Update generated files [skip ci]"
           git push
