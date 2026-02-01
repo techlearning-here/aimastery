@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Apply theme immediately to prevent flash -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('aiMastery_theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="{% block meta_description %}Master {{ total_tools }}+ AI tools including ChatGPT, Claude, HeyGen, Gamma, Notion, Monday.com, Descript, Superhuman, and more. Free comprehensive learning platform across 10 categories. Transform your productivity with AI in 2026.{% endblock %}">
