@@ -555,7 +555,15 @@
                 
                 toolCards.forEach(card => {
                     const slug = card.dataset.slug;
+                    const category = card.dataset.category;
                     const isPopular = card.dataset.popular === 'true';
+                    
+                    // Always show AI Directories & Resources
+                    if (category === 'directory') {
+                        card.classList.remove('filtered-out');
+                        visibleCount++;
+                        return;
+                    }
                     
                     // Check use case filter
                     const matchesUseCase = useCaseTools === null || useCaseTools.has(slug);
