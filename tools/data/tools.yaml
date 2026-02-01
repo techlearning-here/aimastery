@@ -169,6 +169,19 @@ foundation_tools:
     available: false
     page_url: null
 
+  - name: "DeepSeek"
+    slug: "deepseek"
+    category: "foundation"
+    icon: "images/tools/deepseek.svg"
+    emoji: "🔍"
+    gradient: "linear-gradient(135deg, #10b981, #3b82f6)"
+    description: "Advanced AI assistant for research and reasoning. Free alternative with powerful analytical capabilities and code generation."
+    level: "Beginner"
+    level_color: "#10b981"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
 # ============================================================
 # CREATIVE TOOLS (16 tools)
 # ============================================================
@@ -386,6 +399,19 @@ creative_tools:
     available: false
     page_url: null
 
+  - name: "Microsoft Designer"
+    slug: "microsoft-designer"
+    category: "creative"
+    icon: "images/tools/microsoft-designer.svg"
+    emoji: "🎨"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "Free AI-powered design tool from Microsoft. Create social media posts, invitations, and graphics with AI-generated images and templates."
+    level: "Beginner"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
 # ============================================================
 # WRITING TOOLS (13 tools)
 # ============================================================
@@ -554,6 +580,19 @@ writing_tools:
     emoji: "✨"
     gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)"
     description: "Chrome extension for AI-powered writing. Autocomplete sentences, rephrase text, and write emails faster across any website."
+    level: "Beginner"
+    level_color: "#3b82f6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "ProWritingAid"
+    slug: "prowritingaid"
+    category: "writing"
+    icon: "images/tools/prowritingaid.svg"
+    emoji: "📝"
+    gradient: "linear-gradient(135deg, #3b82f6, #8b5cf6)"
+    description: "Free AI writing assistant and grammar checker. Improve your writing with style suggestions, readability analysis, and plagiarism detection."
     level: "Beginner"
     level_color: "#3b82f6"
     status: "Coming Soon"
@@ -1068,6 +1107,19 @@ video_tools:
     available: false
     page_url: null
 
+  - name: "HitPaw"
+    slug: "hitpaw"
+    category: "video"
+    icon: "images/tools/hitpaw.svg"
+    emoji: "🎬"
+    gradient: "linear-gradient(135deg, #14b8a6, #8b5cf6)"
+    description: "AI-powered video editor and watermark remover. Edit videos, remove watermarks, enhance quality, and convert formats with intelligent AI tools."
+    level: "Beginner"
+    level_color: "#14b8a6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
 # ============================================================
 # BUSINESS TOOLS (21 tools)
 # ============================================================
@@ -1340,6 +1392,45 @@ business_tools:
     gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
     description: "AI presentation maker that creates slides from prompts. Generate professional presentations in minutes with AI-powered design and content."
     level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Google Slides"
+    slug: "google-slides"
+    category: "business"
+    icon: "images/tools/google-slides.svg"
+    emoji: "📊"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "Free cloud-based presentation tool with AI features. Create, edit, and collaborate on presentations with smart suggestions and templates."
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "LightPDF"
+    slug: "lightpdf"
+    category: "business"
+    icon: "images/tools/lightpdf.svg"
+    emoji: "📄"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "Free AI-powered PDF editor and converter. Edit, convert, compress, and OCR PDF files with AI assistance online."
+    level: "Beginner"
+    level_color: "#f59e0b"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Bardeen"
+    slug: "bardeen"
+    category: "business"
+    icon: "images/tools/bardeen.svg"
+    emoji: "🤖"
+    gradient: "linear-gradient(135deg, #f59e0b, #ef4444)"
+    description: "Free AI automation tool for repetitive tasks. Automate web scraping, data entry, and workflows without coding using natural language."
+    level: "Intermediate"
     level_color: "#f59e0b"
     status: "Coming Soon"
     available: false
