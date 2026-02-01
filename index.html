@@ -4412,70 +4412,11 @@ onclick="window.location='https://aiscout.net'" style="cursor: pointer;">
                     this.allowedTools = new Set(toolsStr.split(',').filter(t => t));
                 }
                 
-                // Apply filter
-                this.applyFilter();
-                
-                // Update info text
-                this.updateInfo(chip);
+                // Apply filter using the unified PopularToolsFilter
+                PopularToolsFilter.applyFilter();
                 
                 // Save preference
                 localStorage.setItem('aiMastery_useCase', useCase);
-            },
-            
-            applyFilter() {
-                const toolCards = document.querySelectorAll('.tool-card');
-                const categorySections = document.querySelectorAll('[id^="foundation"], [id^="creative"], [id^="writing"], [id^="technical"], [id^="business"], [id^="research"], [id^="voice"], [id^="video"], [id^="data"], [id^="directories"]');
-                
-                let visibleCount = 0;
-                
-                toolCards.forEach(card => {
-                    const slug = card.dataset.slug;
-                    const isPopular = card.dataset.popular === 'true';
-                    const showPopularOnly = document.getElementById('showPopularOnly')?.checked;
-                    
-                    // Check use case filter
-                    let matchesUseCase = this.allowedTools === null || this.allowedTools.has(slug);
-                    
-                    // Check popular filter
-                    let matchesPopular = !showPopularOnly || isPopular;
-                    
-                    if (matchesUseCase && matchesPopular) {
-                        card.classList.remove('filtered-out');
-                        visibleCount++;
-                    } else {
-                        card.classList.add('filtered-out');
-                    }
-                });
-                
-                // Hide empty category sections
-                categorySections.forEach(section => {
-                    const visibleCards = section.querySelectorAll('.tool-card:not(.filtered-out)');
-                    if (visibleCards.length === 0) {
-                        section.classList.add('all-filtered');
-                    } else {
-                        section.classList.remove('all-filtered');
-                    }
-                });
-                
-                return visibleCount;
-            },
-            
-            updateInfo(chip) {
-                const infoEl = document.getElementById('useCaseInfo');
-                if (!infoEl) return;
-                
-                const useCase = chip.dataset.usecase;
-                const label = chip.querySelector('.chip-label')?.textContent || 'All Tools';
-                
-                if (useCase === 'all') {
-                    const total = document.querySelectorAll('.tool-card').length;
-                    infoEl.innerHTML = `<span class="info-text">Showing all <strong>${total}</strong> tools</span>`;
-                } else {
-                    const toolsStr = chip.dataset.tools || '';
-                    const toolCount = toolsStr.split(',').filter(t => t).length;
-                    const visible = document.querySelectorAll('.tool-card:not(.filtered-out)').length;
-                    infoEl.innerHTML = `<span class="info-text"><strong>${visible}</strong> tools for <strong>${label}</strong></span>`;
-                }
             }
         };
         
@@ -4496,11 +4437,54 @@ onclick="window.location='https://aiscout.net'" style="cursor: pointer;">
                 
                 // Listen for changes
                 toggle.addEventListener('change', (e) => {
-                    // Re-apply use case filter (which includes popular filter)
-                    UseCaseFilter.applyFilter();
-                    UseCaseFilter.updateInfo(document.querySelector('.use-case-chip.active'));
+                    this.applyFilter();
                     localStorage.setItem('aiMastery_showPopular', e.target.checked);
                 });
+            },
+            
+            applyFilter() {
+                const toggle = document.getElementById('showPopularOnly');
+                const showPopularOnly = toggle?.checked || false;
+                const toolCards = document.querySelectorAll('.tool-card');
+                const categorySections = document.querySelectorAll('[id^="foundation"], [id^="creative"], [id^="writing"], [id^="technical"], [id^="business"], [id^="research"], [id^="voice"], [id^="video"], [id^="data"], [id^="directories"]');
+                
+                // Get current use case filter
+                const activeUseCase = document.querySelector('.use-case-chip.active');
+                const useCaseTools = activeUseCase?.dataset.usecase === 'all' ? null : 
+                    new Set((activeUseCase?.dataset.tools || '').split(',').filter(t => t));
+                
+                let visibleCount = 0;
+                
+                toolCards.forEach(card => {
+                    const slug = card.dataset.slug;
+                    const isPopular = card.dataset.popular === 'true';
+                    
+                    // Check use case filter
+                    const matchesUseCase = useCaseTools === null || useCaseTools.has(slug);
+                    
+                    // Check popular filter
+                    const matchesPopular = !showPopularOnly || isPopular;
+                    
+                    if (matchesUseCase && matchesPopular) {
+                        card.classList.remove('filtered-out');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('filtered-out');
+                    }
+                });
+                
+                // Hide empty category sections
+                categorySections.forEach(section => {
+                    const visibleCards = section.querySelectorAll('.tool-card:not(.filtered-out)');
+                    if (visibleCards.length === 0) {
+                        section.classList.add('all-filtered');
+                    } else {
+                        section.classList.remove('all-filtered');
+                    }
+                });
+                
+                // Update info
+                this.updateInfo(visibleCount);
             },
             
             updateCount() {
@@ -4510,6 +4494,31 @@ onclick="window.location='https://aiscout.net'" style="cursor: pointer;">
                 const popularCount = document.querySelectorAll('.tool-card[data-popular="true"]').length;
                 const totalCount = document.querySelectorAll('.tool-card').length;
                 countEl.textContent = `${popularCount} of ${totalCount} tools`;
+            },
+            
+            updateInfo(visibleCount) {
+                const infoEl = document.getElementById('useCaseInfo');
+                if (!infoEl) return;
+                
+                const toggle = document.getElementById('showPopularOnly');
+                const activeChip = document.querySelector('.use-case-chip.active');
+                const label = activeChip?.querySelector('.chip-label')?.textContent || 'All Tools';
+                const useCase = activeChip?.dataset.usecase || 'all';
+                
+                if (toggle?.checked) {
+                    if (useCase === 'all') {
+                        infoEl.innerHTML = `<span class="info-text">Showing <strong>${visibleCount}</strong> popular tools</span>`;
+                    } else {
+                        infoEl.innerHTML = `<span class="info-text"><strong>${visibleCount}</strong> popular tools for <strong>${label}</strong></span>`;
+                    }
+                } else {
+                    if (useCase === 'all') {
+                        const total = document.querySelectorAll('.tool-card').length;
+                        infoEl.innerHTML = `<span class="info-text">Showing all <strong>${total}</strong> tools</span>`;
+                    } else {
+                        infoEl.innerHTML = `<span class="info-text"><strong>${visibleCount}</strong> tools for <strong>${label}</strong></span>`;
+                    }
+                }
             }
         };
         
@@ -4518,7 +4527,7 @@ onclick="window.location='https://aiscout.net'" style="cursor: pointer;">
             UseCaseFilter.init();
             PopularToolsFilter.init();
             // Apply initial filter
-            UseCaseFilter.applyFilter();
+            PopularToolsFilter.applyFilter();
         });
         
         window.UseCaseFilter = UseCaseFilter;
