@@ -477,6 +477,45 @@ creative_tools:
     available: false
     page_url: null
 
+  - name: "Creatify AI"
+    slug: "creatify-ai"
+    category: "creative"
+    icon: "images/tools/creatify.svg"
+    emoji: "🎬"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "AI-powered video ad creator. Generate professional marketing videos from product URLs with AI avatars, scripts, and voiceovers in minutes."
+    level: "Beginner"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Virality AI"
+    slug: "virality-ai"
+    category: "creative"
+    icon: "images/tools/virality-ai.svg"
+    emoji: "🚀"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "AI tool for creating viral content. Analyze trends, generate engaging posts, and optimize your content for maximum reach and engagement."
+    level: "Beginner"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "MagicSlides"
+    slug: "magicslides"
+    category: "creative"
+    icon: "images/tools/magicslides.svg"
+    emoji: "✨"
+    gradient: "linear-gradient(135deg, #8b5cf6, #ec4899)"
+    description: "AI presentation generator for Google Slides. Create professional presentations instantly from any topic, text, or URL with AI-powered design."
+    level: "Beginner"
+    level_color: "#8b5cf6"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
 # ============================================================
 # WRITING TOOLS (13 tools)
 # ============================================================
@@ -981,6 +1020,32 @@ voice_tools:
     gradient: "linear-gradient(135deg, #ec4899, #8b5cf6)"
     description: "AI speech coaching for better communication. Get instant feedback on your speaking skills, pace, filler words, and confidence."
     level: "Intermediate"
+    level_color: "#ec4899"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "VoiceAir AI"
+    slug: "voiceair-ai"
+    category: "voice"
+    icon: "images/tools/voiceair.svg"
+    emoji: "🎙️"
+    gradient: "linear-gradient(135deg, #ec4899, #8b5cf6)"
+    description: "AI voice cloning and generation platform. Create realistic voiceovers, clone voices, and generate speech in multiple languages and styles."
+    level: "Intermediate"
+    level_color: "#ec4899"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "Soundraw"
+    slug: "soundraw"
+    category: "voice"
+    icon: "images/tools/soundraw.svg"
+    emoji: "🎵"
+    gradient: "linear-gradient(135deg, #ec4899, #8b5cf6)"
+    description: "AI music generator for creators. Create royalty-free, unique music tracks for videos, podcasts, and content by customizing mood, genre, and length."
+    level: "Beginner"
     level_color: "#ec4899"
     status: "Coming Soon"
     available: false
@@ -1695,6 +1760,19 @@ research_tools:
     gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
     description: "AI-powered academic search engine. Find research papers with AI-extracted insights and consensus analysis from scientific literature."
     level: "Intermediate"
+    level_color: "#06b6d4"
+    status: "Coming Soon"
+    available: false
+    page_url: null
+
+  - name: "ChatPDF"
+    slug: "chatpdf"
+    category: "research"
+    icon: "images/tools/chatpdf.svg"
+    emoji: "📄"
+    gradient: "linear-gradient(135deg, #06b6d4, #3b82f6)"
+    description: "Chat with any PDF document using AI. Upload research papers, books, or documents and ask questions to extract insights instantly."
+    level: "Beginner"
     level_color: "#06b6d4"
     status: "Coming Soon"
     available: false
