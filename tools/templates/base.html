@@ -530,9 +530,6 @@
                     toggle.checked = true;
                 }
                 
-                // Update count
-                this.updateCount();
-                
                 // Listen for changes
                 toggle.addEventListener('change', (e) => {
                     this.applyFilter();
@@ -591,15 +588,6 @@
                 
                 // Update info
                 this.updateInfo(visibleCount);
-            },
-            
-            updateCount() {
-                const countEl = document.getElementById('popularCount');
-                if (!countEl) return;
-                
-                const popularCount = document.querySelectorAll('.tool-card[data-popular="true"]').length;
-                const totalCount = document.querySelectorAll('.tool-card').length;
-                countEl.textContent = `${popularCount} of ${totalCount} tools`;
             },
             
             updateInfo(visibleCount) {
