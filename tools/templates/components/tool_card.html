@@ -1,8 +1,9 @@
 {# Tool Card Component - Renders a single tool card #}
-<div class="tool-card tool-card-{{ tool.category }}" 
+<div class="tool-card tool-card-{{ tool.category }}{% if tool.popular %} popular-tool{% endif %}" 
      data-name="{{ tool.name|lower }}" 
      data-category="{{ tool.category }}"
      data-level="{{ tool.level|lower }}"
+     data-popular="{{ 'true' if tool.popular else 'false' }}"
      {% if tool.available and tool.page_url %}onclick="window.location='{{ tool.page_url }}'" style="cursor: pointer;"{% endif %}>
     
     <div class="tool-card-header">

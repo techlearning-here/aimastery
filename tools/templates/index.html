@@ -68,9 +68,19 @@
 <!-- Complete Tools Catalog -->
 <section class="fade-in" style="margin: 60px 0;">
     <h2 style="text-align: center; margin-bottom: 15px;">📚 Complete AI Tools Catalog</h2>
-    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem;">
+    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 20px; font-size: 1.1rem;">
         All top curated tools organized by category. Click any tool to start learning!
     </p>
+    
+    <!-- Popular Tools Toggle -->
+    <div class="popular-toggle-container">
+        <label class="popular-toggle">
+            <input type="checkbox" id="showPopularOnly">
+            <span class="toggle-slider"></span>
+            <span class="toggle-label">⭐ Show Popular Tools Only</span>
+        </label>
+        <span class="popular-count" id="popularCount"></span>
+    </div>
 
     <!-- Foundation Category -->
     {% if foundation_tools %}

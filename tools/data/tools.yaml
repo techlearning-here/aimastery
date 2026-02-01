@@ -19,6 +19,7 @@ foundation_tools:
     page_url: null
     badges: ["Popular", "Free"]
     featured: true
+    popular: true
 
   - name: "Claude AI"
     slug: "claude"
@@ -34,6 +35,7 @@ foundation_tools:
     page_url: null
     badges: ["Popular", "Free"]
     featured: true
+    popular: true
 
   - name: "Gemini"
     slug: "gemini"
@@ -48,6 +50,7 @@ foundation_tools:
     available: false
     page_url: null
     badges: ["Popular", "Free"]
+    popular: true
 
   - name: "Prompt Engineering"
     slug: "prompt-engineering"
@@ -76,6 +79,7 @@ foundation_tools:
     available: false
     page_url: null
     badges: ["Popular", "Free"]
+    popular: true
 
   - name: "Microsoft Copilot"
     slug: "microsoft-copilot"
@@ -200,6 +204,7 @@ creative_tools:
     page_url: "pages/creative/canva.html"
     badges: ["Popular", "Free"]
     featured: true
+    popular: true
 
   - name: "Midjourney"
     slug: "midjourney"
@@ -215,6 +220,7 @@ creative_tools:
     page_url: null
     badges: ["Popular"]
     featured: true
+    popular: true
 
   - name: "DALL-E 3"
     slug: "dall-e-3"
@@ -229,6 +235,7 @@ creative_tools:
     available: false
     page_url: null
     badges: ["Popular"]
+    popular: true
 
   - name: "Leonardo.AI"
     slug: "leonardo-ai"
@@ -281,6 +288,7 @@ creative_tools:
     status: "Coming Soon"
     available: false
     page_url: null
+    popular: true
 
   - name: "Pika Labs"
     slug: "pika-labs"
@@ -519,6 +527,7 @@ writing_tools:
     status: "Coming Soon"
     available: false
     page_url: null
+    popular: true
 
   - name: "Copy.ai"
     slug: "copy-ai"
@@ -545,6 +554,7 @@ writing_tools:
     status: "Coming Soon"
     available: false
     page_url: null
+    popular: true
 
   - name: "Writesonic"
     slug: "writesonic"
@@ -584,6 +594,7 @@ writing_tools:
     status: "Coming Soon"
     available: false
     page_url: null
+    popular: true
 
   - name: "Wordtune"
     slug: "wordtune"
@@ -611,6 +622,7 @@ writing_tools:
     available: false
     page_url: null
     badges: ["Popular"]
+    popular: true
 
   - name: "Koalawriter"
     slug: "koalawriter"
@@ -708,6 +720,7 @@ technical_tools:
     page_url: null
     badges: ["Popular"]
     featured: true
+    popular: true
 
   - name: "Replit Ghostwriter"
     slug: "replit-ghostwriter"
@@ -734,6 +747,7 @@ technical_tools:
     status: "Coming Soon"
     available: false
     page_url: null
+    popular: true
 
   - name: "Codeium"
     slug: "codeium"
@@ -747,6 +761,7 @@ technical_tools:
     status: "Coming Soon"
     available: false
     page_url: null
+    popular: true
 
   - name: "Tabnine"
     slug: "tabnine"
@@ -868,6 +883,7 @@ voice_tools:
     status: "Learn Now →"
     available: true
     page_url: "day08_elevenlabs.md"
+    popular: true
 
   - name: "Otter.ai"
     slug: "otter-ai"
@@ -933,6 +949,7 @@ voice_tools:
     status: "Coming Soon"
     available: false
     page_url: null
+    popular: true
 
   - name: "Play.ht"
     slug: "play-ht"
@@ -946,6 +963,7 @@ voice_tools:
     status: "Coming Soon"
     available: false
     page_url: null
+    popular: true
 
   - name: "Krisp"
     slug: "krisp"
@@ -1054,6 +1072,7 @@ video_tools:
     status: "Learn Now →"
     available: true
     page_url: "day14_synthesia.md"
+    popular: true
 
   - name: "Runway"
     slug: "runway"
@@ -1171,6 +1190,7 @@ video_tools:
     status: "Coming Soon"
     available: false
     page_url: null
+    popular: true
 
   - name: "Invideo AI"
     slug: "invideo-ai"
@@ -1197,6 +1217,7 @@ video_tools:
     status: "Coming Soon"
     available: false
     page_url: null
+    popular: true
 
   - name: "VideoExpress.ai"
     slug: "videoexpress-ai"
@@ -1253,6 +1274,7 @@ business_tools:
     status: "Learn Now →"
     available: true
     page_url: "day18_zapier.md"
+    popular: true
 
   - name: "Beautiful.ai"
     slug: "beautiful-ai"
@@ -1383,6 +1405,7 @@ business_tools:
     status: "Coming Soon"
     available: false
     page_url: null
+    popular: true
 
   - name: "ClickUp"
     slug: "clickup"
@@ -1569,6 +1592,7 @@ research_tools:
     status: "Coming Soon"
     available: false
     page_url: null
+    popular: true
 
   - name: "Scite"
     slug: "scite"
@@ -1595,6 +1619,7 @@ research_tools:
     status: "Coming Soon"
     available: false
     page_url: null
+    popular: true
 
   - name: "Research Rabbit"
     slug: "research-rabbit"
@@ -1879,6 +1904,7 @@ directory_tools:
     available: true
     page_url: "https://www.futurepedia.io"
     external: true
+    popular: true
 
   - name: "AI Valley"
     slug: "ai-valley"

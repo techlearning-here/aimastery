@@ -468,6 +468,70 @@
         // Make available globally
         window.ThemeSwitcher = ThemeSwitcher;
         window.FeedbackSystem = FeedbackSystem;
+        
+        // ==================== POPULAR TOOLS FILTER ====================
+        const PopularToolsFilter = {
+            init() {
+                const toggle = document.getElementById('showPopularOnly');
+                if (!toggle) return;
+                
+                // Load saved preference
+                const saved = localStorage.getItem('aiMastery_showPopular');
+                if (saved === 'true') {
+                    toggle.checked = true;
+                    this.applyFilter(true);
+                }
+                
+                // Update count
+                this.updateCount();
+                
+                // Listen for changes
+                toggle.addEventListener('change', (e) => {
+                    this.applyFilter(e.target.checked);
+                    localStorage.setItem('aiMastery_showPopular', e.target.checked);
+                });
+            },
+            
+            applyFilter(showPopularOnly) {
+                const toolCards = document.querySelectorAll('.tool-card');
+                const categorySections = document.querySelectorAll('[id^="foundation"], [id^="creative"], [id^="writing"], [id^="technical"], [id^="business"], [id^="research"], [id^="voice"], [id^="video"], [id^="data"], [id^="directories"]');
+                
+                toolCards.forEach(card => {
+                    const isPopular = card.dataset.popular === 'true';
+                    if (showPopularOnly && !isPopular) {
+                        card.classList.add('filtered-out');
+                    } else {
+                        card.classList.remove('filtered-out');
+                    }
+                });
+                
+                // Hide empty category sections
+                categorySections.forEach(section => {
+                    const visibleCards = section.querySelectorAll('.tool-card:not(.filtered-out)');
+                    if (visibleCards.length === 0) {
+                        section.classList.add('all-filtered');
+                    } else {
+                        section.classList.remove('all-filtered');
+                    }
+                });
+            },
+            
+            updateCount() {
+                const countEl = document.getElementById('popularCount');
+                if (!countEl) return;
+                
+                const popularCount = document.querySelectorAll('.tool-card[data-popular="true"]').length;
+                const totalCount = document.querySelectorAll('.tool-card').length;
+                countEl.textContent = `${popularCount} of ${totalCount} tools`;
+            }
+        };
+        
+        // Initialize on DOM ready
+        document.addEventListener('DOMContentLoaded', () => {
+            PopularToolsFilter.init();
+        });
+        
+        window.PopularToolsFilter = PopularToolsFilter;
     </script>
     
     {% block scripts %}{% endblock %}

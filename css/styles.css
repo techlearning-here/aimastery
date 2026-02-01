@@ -2018,3 +2018,128 @@ html {
         height: 45px;
     }
 }
+
+/* ==================== POPULAR TOOLS TOGGLE ==================== */
+
+.popular-toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.popular-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    padding: 12px 20px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 30px;
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    transition: all 0.3s ease;
+}
+
+.popular-toggle:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+.popular-toggle input {
+    display: none;
+}
+
+.toggle-slider {
+    width: 50px;
+    height: 26px;
+    background: rgba(100, 116, 139, 0.5);
+    border-radius: 13px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.toggle-slider::before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popular-toggle input:checked + .toggle-slider {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+.popular-toggle input:checked + .toggle-slider::before {
+    transform: translateX(24px);
+}
+
+.toggle-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.popular-count {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+/* Popular Tool Indicator */
+.popular-tool {
+    position: relative;
+}
+
+.popular-tool::after {
+    content: '⭐';
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 1.2rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Filter Mode Styles */
+.tool-card.filtered-out {
+    display: none !important;
+}
+
+.category-section.all-filtered {
+    display: none !important;
+}
+
+/* Light Mode for Toggle */
+[data-theme="light"] .popular-toggle {
+    background: rgba(59, 130, 246, 0.08);
+}
+
+[data-theme="light"] .toggle-label {
+    color: #1a202c;
+}
+
+@media (max-width: 768px) {
+    .popular-toggle-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .popular-toggle {
+        padding: 10px 16px;
+    }
+    
+    .toggle-label {
+        font-size: 0.9rem;
+    }
+}
